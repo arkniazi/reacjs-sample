@@ -23,7 +23,12 @@ export const LinkList = () => {
                                 text="surfboards"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
 
                         <li>
@@ -33,7 +38,12 @@ export const LinkList = () => {
                                 text="sups"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
 
                         <li>
@@ -43,7 +53,12 @@ export const LinkList = () => {
                                 text="wetsuits"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
                     </StyledLinkList>
 
@@ -55,7 +70,12 @@ export const LinkList = () => {
                                 text="kitesurf"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
 
                         <li>
@@ -65,7 +85,12 @@ export const LinkList = () => {
                                 text="kites"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
 
                         <li>
@@ -75,7 +100,12 @@ export const LinkList = () => {
                                 text="foilboards"
                                 decoration="chevron-left"
                             />
-                            <ChevronLeft className="textLink__decoration" />
+                            <ChevronLeft
+                                className="textLink__decoration"
+                                height="11"
+                                width="7"
+                                fill="#179AD3"
+                            />
                         </li>
                     </StyledLinkList>
                 </FlexContainer>

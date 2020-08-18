@@ -1,7 +1,9 @@
-import React, { Children } from "react"
+import React, { Children, useState } from "react"
 import ReactSelect from "react-select"
 import makeAnimated from "react-select/animated"
 import { useField, useFormikContext } from "formik"
+import _uniqueId from "lodash/uniqueId"
+
 import styled, { withTheme } from "styled-components"
 import { Error } from "../Error"
 import { customStyles } from "./styled"
@@ -35,6 +37,7 @@ export const Select = ({
     ...props
 }) => {
     //eslint-disable-next-line
+    const [id] = useState(_uniqueId("unique-"))
     const [field, meta] = useField(name)
     const { setFieldValue, setFieldTouched } = useFormikContext()
 
@@ -56,6 +59,7 @@ export const Select = ({
                 onChange={handleOnChange}
                 defaultValue={defaultValue}
                 value={value}
+                instanceId={id}
                 onBlur={() => setFieldTouched(name, true)}
                 options={
                     freeText && options

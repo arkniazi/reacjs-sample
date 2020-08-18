@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const StyledBanner = styled.section`
-    padding-top: 110px;
+    padding-top: 200px;
     padding-bottom: 108px;
     background-image: url(${(props) => props.imgURL && props.imgURL});
     background-position: bottom center;

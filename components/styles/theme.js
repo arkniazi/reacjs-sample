@@ -6,6 +6,7 @@ export const theme = {
         black: "#000",
         darkGray: "#272932",
         orange: "#F37126",
+        themeBlue: "#179AD3",
         darkBlue: "#005CB0",
         lightGrey: "rgba(255,255,255,0.4)",
     },
@@ -22,7 +23,7 @@ export const theme = {
         xl: "100px",
     },
     buttons: {
-        paddingSmall: "22px 30px",
+        paddingSmall: "15px 30px",
         paddingMedium: "20px 55px",
     },
     fontSizes: {
