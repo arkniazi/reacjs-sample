@@ -22,7 +22,6 @@ export const StyledNavItem = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
     border-left: ${(props) =>
         props.border ? "1px solid " + props.theme.colors.lightGrey : ""};
     border-right: ${(props) =>

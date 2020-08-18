@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const InnerPageBannerStyled = styled.div`
-    padding-top: 80px;
+    padding-top: 75px;
     padding-bottom: ${(props) => (props.layout === "form" ? "140px" : "117px")};
     background: linear-gradient(
             252.58deg,
@@ -13,6 +13,9 @@ export const InnerPageBannerStyled = styled.div`
     background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: -1px;
+    border-top: ${(props) => props.theme.sizes.headerHeight} solid
+        ${(props) => props.theme.colors.darkBlue};
+
     .innerPageBanner {
         &__title {
             max-width: 80%;

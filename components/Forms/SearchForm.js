@@ -1,9 +1,13 @@
+import { useState } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import { FlexContainer } from "../styles/Page"
 import { TextInput } from "../FormFields/TextInput"
 import { Select } from "../FormFields/Select"
 import { Submit } from "../FormFields/Submit"
+
+import { RadioCategorySection } from "./sections/RadioCategorySection"
+
 import {
     radiusOptions,
     conditionOptions,
@@ -14,6 +18,7 @@ import {
 
 export const SearchForm = () => {
     const InitialValues = {
+        category: "surf",
         location: "",
         radius: "",
         condition: "",
@@ -32,6 +37,7 @@ export const SearchForm = () => {
             <Formik
                 initialValues={InitialValues}
                 validationSchema={validationSchema}
+                enableReinitialize
                 onSubmit={(values, { setSubmitting }) => {
                     setTimeout(() => {
                         alert(JSON.stringify(values, null, 2))
@@ -41,6 +47,8 @@ export const SearchForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
+                        <RadioCategorySection />
+
                         <TextInput
                             label="location"
                             name="location"
@@ -99,7 +107,7 @@ export const SearchForm = () => {
                             <Submit
                                 type="submit"
                                 isSubmitting={isSubmitting}
-                                text="Submit"
+                                text="Search"
                                 searchStyle
                             />
                         </FlexContainer>

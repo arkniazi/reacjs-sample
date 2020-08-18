@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Nav } from "../Nav"
 import Router from "next/router"
@@ -8,6 +9,7 @@ import { FlexContainer } from "../styles/Page"
 
 Router.onRouteChangeStart = () => {
     NProgress.start()
+    checkHeader
 }
 Router.onRouteChangeComplete = () => {
     NProgress.done()
