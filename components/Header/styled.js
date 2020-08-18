@@ -1,11 +1,10 @@
 import styled from "styled-components"
 
 export const StyledHeader = styled.div`
-    /* background-color: ${(props) =>
-        props.solidBackground == true ? "blue" : "transparent"}; */
-    background-color: ${(props) => props.theme.colors.darkBlue};
+    background-color: transparent;
     z-index:1;
-    position: relative;
+    position: absolute;
+    width: 100%;
     border-bottom:1px solid ${(props) => props.theme.colors.lightGrey}; 
     
     .container {
