@@ -71,6 +71,18 @@ export const GlobalStyle = createGlobalStyle`
         text-transform: uppercase;
         letter-spacing: -2px;
         font-weight: bold;
+        &.black{
+            color: ${theme.colors.black};
+        }
+        &.darkGrey{
+            color: ${theme.colors.darkGray};
+        }
+        &.white{
+            color: ${theme.colors.white};
+        }
+        &.orange{
+            color: ${theme.colors.orange};
+        }
     }
     h1, .h1{
         font-size:${theme.fontSizes.desktop.h1.size};
@@ -81,27 +93,11 @@ export const GlobalStyle = createGlobalStyle`
             font-size:${theme.fontSizes.desktop.banner.size};
             line-height: ${theme.fontSizes.desktop.banner.lineHeight};
         }
-
-        &.black{
-            color: ${theme.colors.black};
-        }
-        &.white{
-            color: ${theme.colors.white};
-        }
     }
 
     h2, .h2{
         font-size:${theme.fontSizes.desktop.h2.size};
         line-height: ${theme.fontSizes.desktop.h2.size};
-        &.black{
-            color: ${theme.colors.black};
-        }
-        &.darkGrey{
-            color: ${theme.colors.darkGray};
-        }
-        &.white{
-            color: ${theme.colors.white};
-        }
     }
 
     h3, .h3{

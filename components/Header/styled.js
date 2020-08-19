@@ -21,6 +21,11 @@ export const StyledLogo = styled.h3`
     text-transform: uppercase;
     font-family: ${(props) => props.theme.font.heading};
     margin: 0 30px 0 0;
+    display: flex;
+    align-items: center;
+    img {
+        margin-left: 10px;
+    }
     a {
         color: white;
     }
