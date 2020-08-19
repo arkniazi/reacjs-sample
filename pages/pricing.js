@@ -1,6 +1,7 @@
 import PricingPageTemplate from "../templates/PricingPageTemplate"
 import { InnerPageBanner } from "../components/InnerPageBanner"
 import { ColorColumns } from "../components/ColorColumns"
+import { AccordionColumns } from "../components/AccordionColumns"
 
 const Contact = () => {
     return (
@@ -11,6 +12,7 @@ const Contact = () => {
             />
             <PricingPageTemplate>
                 <ColorColumns />
+                <AccordionColumns />
             </PricingPageTemplate>
         </>
     )
