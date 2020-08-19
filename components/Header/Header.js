@@ -6,6 +6,7 @@ import NProgress from "nprogress"
 import { StyledHeader, StyledLogo } from "./styled"
 import { ComponentContainer } from "../styles/Page"
 import { FlexContainer } from "../styles/Page"
+import { Image } from "../Image"
 
 Router.onRouteChangeStart = () => {
     NProgress.start()
@@ -27,9 +28,16 @@ export const Header = ({ transparentHeading }) => {
                         <Link href="/">
                             <a>2ndSurf</a>
                         </Link>
+                        <Image
+                            className="footer__logo"
+                            path="/images/header/logo.png"
+                            alt="2nd surf logo"
+                            height="56px"
+                            width="36px"
+                        />
                     </StyledLogo>
 
-                    <Nav color="white" type="header" />
+                    <Nav color="white" />
                 </FlexContainer>
             </ComponentContainer>
         </StyledHeader>

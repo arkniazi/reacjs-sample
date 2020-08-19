@@ -1,5 +1,53 @@
 import styled from "styled-components"
 
+export const Exit = ({ className, height, width, fill, onClick }) => {
+    return (
+        <svg
+            width={width || "24px"}
+            height={height || "24px"}
+            className={className}
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            onClick={onClick}
+        >
+            <path
+                d="M18 6L6 18"
+                stroke={fill || "#179AD3"}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+            <path
+                d="M6 6L18 18"
+                stroke={fill || "#179AD3"}
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+            />
+        </svg>
+    )
+}
+
+export const ChevronDown = ({ className, height, width, fill }) => {
+    return (
+        <svg
+            width={width || "14px"}
+            height={height || "9px"}
+            viewBox="0 0 14 9"
+            className={className}
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M0.75 1L6.75 7L12.75 1"
+                stroke={fill || "white"}
+                strokeWidth="2"
+            />
+        </svg>
+    )
+}
+
 export const ChevronLeft = ({ className, height, width, fill }) => {
     return (
         <svg
