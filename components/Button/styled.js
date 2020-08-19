@@ -1,8 +1,8 @@
 import styled from "styled-components"
-import { theme } from "../styles/theme"
 
 export const StyledButton = styled.div`
-    background-color: ${(props) => props.theme.colors.orange};
+    background-color: ${(props) =>
+        props.altTheme ? props.theme.colors.themeBlue : props.theme.colors.orange};
     display: flex;
     justify-content: center;
     align-items: center;
