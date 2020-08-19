@@ -2,7 +2,12 @@ import styled from "styled-components"
 
 export const InnerPageBannerStyled = styled.div`
     padding-top: 75px;
-    padding-bottom: ${(props) => (props.layout === "form" ? "140px" : "117px")};
+    padding-bottom: ${(props) =>
+        props.layout === "form"
+            ? "140px"
+            : props.layout === "text"
+            ? "60px"
+            : "117px"};
     background: linear-gradient(
             252.58deg,
             rgba(23, 154, 211, 0.8) 5.92%,
@@ -15,11 +20,22 @@ export const InnerPageBannerStyled = styled.div`
     margin-bottom: -1px;
     border-top: ${(props) => props.theme.sizes.headerHeight} solid
         ${(props) => props.theme.colors.darkBlue};
-
+    position: relative;
+    .background-cover {
+        position: absolute;
+        background-color: white;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
     .innerPageBanner {
         &__title {
             max-width: 80%;
             margin-bottom: 55px;
+            z-index: 1;
+            position: relative;
         }
         &__column {
             flex: 1 0 0;

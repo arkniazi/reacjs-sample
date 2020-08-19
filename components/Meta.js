@@ -8,7 +8,7 @@ const Meta = () => (
         <link rel="stylesheet" type="text/css" href="/static/nprogress.css" />
         <title>2ND SURF</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat&family=Rubik:wght@500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik:wght@400;500;700&display=swap"
             rel="stylesheet"
         ></link>
     </Head>

@@ -36,7 +36,11 @@ export const Footer = () => {
                                 </div>
                                 <div className="inner-column">
                                     <TextLink url="/about" text="About" size="sm" />
-                                    <TextLink url="" text="Pricing" size="sm" />
+                                    <TextLink
+                                        url="/pricing"
+                                        text="Pricing"
+                                        size="sm"
+                                    />
                                     <TextLink
                                         url="/contact"
                                         text="Contact Us"
