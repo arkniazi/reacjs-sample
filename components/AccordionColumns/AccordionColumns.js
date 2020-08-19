@@ -1,5 +1,6 @@
 import { ComponentContainer, FlexContainer } from "../styles/Page"
 import { AccordionColumnsStyled } from "./styled"
+import { Accordion } from "./Accordion"
 
 export const AccordionColumns = () => {
     return (
@@ -22,7 +23,7 @@ export const AccordionColumns = () => {
                             </p>
                         </div>
 
-                        {/* ACCORDION HERE */}
+                        <Accordion />
                     </div>
                 </FlexContainer>
             </ComponentContainer>
