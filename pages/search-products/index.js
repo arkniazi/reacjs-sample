@@ -7,13 +7,13 @@ import { Filter } from "../../components/Filter"
 import { ProductGrid } from "../../components/ProductGrid"
 import SearchPageTemplate from "../../templates/SearchPageTemplate"
 
-const SearchPage = ({ category }) => {
+const SearchPage = ({ category, subcategory }) => {
     return (
         <>
             <SearchPageTemplate>
                 <ComponentContainer>
                     <FlexContainer>
-                        <Filter category={category} />
+                        <Filter category={category} subcategory={subcategory} />
                         <ProductGrid />
                     </FlexContainer>
                     <AdBanner margin="90px 0 0 0" />

@@ -3,7 +3,8 @@ export const surfDropdownData = [
         title: "Board Type",
         links: [
             {
-                url: "/surf?boardtype=shortboard",
+                url: "/search-products/[...param]",
+                as: "/search/products/surf/shortboard",
                 text: "Shortboard",
             },
             {
