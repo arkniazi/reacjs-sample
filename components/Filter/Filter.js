@@ -6,7 +6,7 @@ export const Filter = ({ category }) => {
     return (
         <FilterStyled>
             <div className="Filter">
-                <h1 className="black">{category ? category : "search"}</h1>
+                <h2 className="h1 black">{category ? category : "search"}</h2>
                 <FilterForm />
             </div>
         </FilterStyled>

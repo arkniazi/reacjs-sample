@@ -149,5 +149,6 @@ export const theme = {
     },
     bs: {
         blue: "-15px 15px 45px rgba(0, 92, 176, 0.75);",
+        dark: "-15px 15px 43px rgba(84, 103, 121, 0.25);"
     },
 }

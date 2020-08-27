@@ -34,7 +34,7 @@ export const customStyles = {
         color: "black",
         fontSize: theme.fontSizes.desktop.tiny.size,
         fontWeight: "bold",
-        boxShadow: theme.bs.blue,
+        boxShadow: theme.bs.dark,
     }),
     singleValue: (base) => ({
         ...base,

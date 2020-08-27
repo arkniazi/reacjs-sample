@@ -6,4 +6,8 @@ export const FilterStyled = styled.div`
     .Filter {
         margin-right: 20px;
     }
+
+    h2{
+        margin-bottom: 50px;
+    }
 `

@@ -2,6 +2,7 @@ import styled from "styled-components"
 
 export const AdBannerStyled = styled.div`
     background-color: ${(props) => props.theme.colors.orange};
+    margin: ${(props) => props.margin ? props.margin : ''};
     .adBannerStyled {
         &__column {
             flex: 1 0 0;

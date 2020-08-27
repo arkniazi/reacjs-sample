@@ -3,10 +3,10 @@ import { FlexContainer } from "../styles/Page"
 import { Image } from "../Image"
 import { ComponentContainer } from "../styles/Page"
 
-export const AdBanner = () => {
+export const AdBanner = ({ margin }) => {
     return (
         <ComponentContainer>
-            <AdBannerStyled>
+            <AdBannerStyled margin={margin}>
                 <FlexContainer dir="row">
                     <div className="adBannerStyled__column">
                         <Image
