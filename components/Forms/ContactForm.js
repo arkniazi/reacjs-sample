@@ -42,6 +42,7 @@ export const ContactForm = () => {
                             name="name"
                             type="text"
                             placeholder="Name"
+                            noLabel
                         />
                         <FlexContainer>
                             <TextInput
@@ -50,6 +51,7 @@ export const ContactForm = () => {
                                 type="email"
                                 placeholder="Email"
                                 fullWidth
+                                noLabel
                             />
                             <TextInput
                                 label="phone"
@@ -57,6 +59,7 @@ export const ContactForm = () => {
                                 type="text"
                                 placeholder="Phone"
                                 fullWidth
+                                noLabel
                             />
                         </FlexContainer>
                         <FlexContainer>
@@ -66,6 +69,7 @@ export const ContactForm = () => {
                                 type="text"
                                 placeholder="Company"
                                 fullWidth
+                                noLabel
                             />
                             <TextInput
                                 label="location"
@@ -73,6 +77,7 @@ export const ContactForm = () => {
                                 type="text"
                                 placeholder="Location"
                                 fullWidth
+                                noLabel
                             />
                         </FlexContainer>
                         <TextInput
@@ -80,6 +85,7 @@ export const ContactForm = () => {
                             name="subject"
                             type="text"
                             placeholder="Subject"
+                            noLabel
                         />
 
                         <TextArea

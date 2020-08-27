@@ -1,10 +1,12 @@
 import ContactPageTemplate from "../templates/ContactPageTemplate"
 import { InnerPageBanner } from "../components/InnerPageBanner"
-
+import { FormLayout } from "../components/InnerPageBanner/FormLayout"
 const Contact = () => {
     return (
         <>
-            <InnerPageBanner layout="form" />
+            <InnerPageBanner>
+                <FormLayout />
+            </InnerPageBanner>
             <ContactPageTemplate></ContactPageTemplate>
         </>
     )

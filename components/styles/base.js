@@ -110,4 +110,12 @@ export const GlobalStyle = createGlobalStyle`
         line-height: ${theme.fontSizes.desktop.h5.size};
         letter-spacing: 0;
     }
+
+    label.label{
+        display: block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-family: ${theme.font.heading};
+    }
 `

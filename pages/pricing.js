@@ -1,18 +1,15 @@
 import PricingPageTemplate from "../templates/PricingPageTemplate"
 import { InnerPageBanner } from "../components/InnerPageBanner"
 import { ColorColumns } from "../components/ColorColumns"
-import { AccordionColumns } from "../components/AccordionColumns"
-
+import { TextLayout } from "../components/InnerPageBanner/TextLayout"
 const Contact = () => {
     return (
         <>
-            <InnerPageBanner
-                layout="text"
-                title="Pricing Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            />
+            <InnerPageBanner>
+                <TextLayout title="Pricing Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
+            </InnerPageBanner>
             <PricingPageTemplate>
                 <ColorColumns />
-                <AccordionColumns />
             </PricingPageTemplate>
         </>
     )

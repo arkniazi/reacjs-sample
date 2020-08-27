@@ -21,24 +21,16 @@ export const Nav = ({ color }) => {
         console.log(type)
         switch (type) {
             case "surf":
-                setSurfDropDown(true)
-                setSupDropDown(false)
-                setWetsuitDropDown(false)
+                handleDropDownChange(true, false, false)
                 break
             case "sup":
-                setSurfDropDown(false)
-                setSupDropDown(true)
-                setWetsuitDropDown(false)
+                handleDropDownChange(false, true, false)
                 break
             case "wetsuit":
-                setSurfDropDown(false)
-                setSupDropDown(false)
-                setWetsuitDropDown(true)
+                handleDropDownChange(false, false, true)
                 break
             default:
-                setSurfDropDown(false)
-                setSupDropDown(false)
-                setWetsuitDropDown(false)
+                handleDropDownChange(false, false, false)
         }
     }
 
@@ -57,16 +49,14 @@ export const Nav = ({ color }) => {
                       document.body
                   ).scrollTop
         if (scrollTop >= 15) {
-            setSurfDropDown(false)
-            setSupDropDown(false)
-            setWetsuitDropDown(false)
+            handleDropDownChange(false, false, false)
         }
     }
 
-    const handleDropdownExit = () => {
-        setSurfDropDown(false)
-        setSupDropDown(false)
-        setWetsuitDropDown(false)
+    const handleDropDownChange = (surf, sup, wetsuit) => {
+        setSurfDropDown(surf)
+        setSupDropDown(sup)
+        setWetsuitDropDown(wetsuit)
     }
 
     //set data array for dropdown
@@ -88,25 +78,50 @@ export const Nav = ({ color }) => {
         <StyledNav>
             <div className="menu-wrapper">
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("surf")}>
-                    <TextLink url="/sell" color={color} text="Surf" />
+                    <TextLink
+                        as="/search-products/surf"
+                        url="/search-products/[category]"
+                        color={color}
+                        text="Surf"
+                    />
                     <ChevronDown className="styledNavItem__icon" />
                 </StyledNavItem>
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("sup")}>
-                    <TextLink url="/sup" color={color} text="Sup" />
+                    <TextLink
+                        url="/search-products/[category]"
+                        as="/search-products/sup"
+                        color={color}
+                        text="Sup"
+                    />
                     <ChevronDown className="styledNavItem__icon" />
                 </StyledNavItem>
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav()}>
-                    <TextLink url="/kitesurf" color={color} text="Kitesurf" />
+                    <TextLink
+                        url="/search-products/[category]"
+                        as="/search-products/kitesurf"
+                        color={color}
+                        text="Kitesurf"
+                    />
                 </StyledNavItem>
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav()}>
-                    <TextLink url="/foil" color={color} text="Foil" />
+                    <TextLink
+                        url="/search-products/[category]"
+                        as="/search-products/foil"
+                        color={color}
+                        text="Foil"
+                    />
                 </StyledNavItem>
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("wetsuit")}>
-                    <TextLink url="/wetsuit" color={color} text="Wetsuit" />
+                    <TextLink
+                        url="/search-products/[category]"
+                        as="/search-products/wetsuit"
+                        color={color}
+                        text="Wetsuit"
+                    />
                     <ChevronDown className="styledNavItem__icon" />
                 </StyledNavItem>
             </div>
@@ -126,7 +141,7 @@ export const Nav = ({ color }) => {
                 data={dropdownData}
                 type={dropdownType}
                 active={surfDropDown || supDropDown || wetsuitDropDown}
-                handleDropdownExit={handleDropdownExit}
+                handleDropDownChange={handleDropDownChange}
             />
         </StyledNav>
     )

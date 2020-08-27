@@ -3,37 +3,29 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import { FlexContainer } from "../styles/Page"
 import { TextInput } from "../FormFields/TextInput"
-import { Select } from "../FormFields/Select"
+import { SelectFilter } from "../FormFields/SelectFilter"
 import { Submit } from "../FormFields/Submit"
 
 import { RadioCategorySection } from "./sections/RadioCategorySection"
 
 import {
-    radiusOptions,
-    conditionOptions,
-    minPriceOptions,
+    categoryOptions,
     maxPriceOptions,
-    sellerTypeOptions,
-} from "./SearchFormOptions"
+    minPriceOptions,
+} from "./FilterFormOptions"
 
-export const SearchForm = () => {
+export const FilterForm = () => {
     const InitialValues = {
-        category: "surf",
+        category: "",
         location: "",
-        radius: "",
-        condition: "",
-        minPrice: "",
-        maxPrice: "",
-        keyword: "",
     }
-    //const phoneRegExp = /^(?:\+?(61))? ?(?:\((?=.*\)))?(0?[2-57-8])\)? ?(\d\d(?:[- ](?=\d{3})|(?!\d\d[- ]?\d[- ]))\d\d[- ]?\d[- ]?\d{3})$/
 
     const validationSchema = Yup.object({
         location: Yup.string().required("Required"),
     })
 
     return (
-        <div>
+        <div style={{ background: "blue" }}>
             <Formik
                 initialValues={InitialValues}
                 validationSchema={validationSchema}
@@ -47,17 +39,38 @@ export const SearchForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <RadioCategorySection />
-
+                        <SelectFilter
+                            options={categoryOptions}
+                            name="category"
+                            label="Filter by categories"
+                            placeholder="Category"
+                        />
                         <TextInput
                             label="location"
                             name="location"
                             type="text"
                             placeholder="Location"
-                            searchStyle
-                            noLabel
+                            color="black"
                         />
                         <FlexContainer>
+                            <SelectFilter
+                                options={minPriceOptions}
+                                name="minPrice"
+                                label="Min Price"
+                                placeholder="Min Price"
+                                color="black"
+                                fullWidth
+                            />
+                            <SelectFilter
+                                options={maxPriceOptions}
+                                name="maxPrice"
+                                label="Max Price"
+                                placeholder="Max Price"
+                                color="black"
+                                fullWidth
+                            />
+                        </FlexContainer>
+                        {/* <FlexContainer>
                             <Select
                                 options={radiusOptions}
                                 name="radius"
@@ -65,6 +78,7 @@ export const SearchForm = () => {
                                 fullWidth
                                 placeholder="Radius"
                                 defaultValue="Radius"
+                                color="black"
                             />
                             <Select
                                 options={conditionOptions}
@@ -72,45 +86,15 @@ export const SearchForm = () => {
                                 label="Condition"
                                 placeholder="Condition"
                                 fullWidth
+                                color="black"
                             />
-                        </FlexContainer>
+                        </FlexContainer> */}
 
-                        <FlexContainer>
-                            <Select
-                                options={minPriceOptions}
-                                name="minPrice"
-                                label="Min Price"
-                                placeholder="Min Price"
-                                fullWidth
-                            />
-                            <Select
-                                options={maxPriceOptions}
-                                name="maxPrice"
-                                label="Max Price"
-                                placeholder="Max Price"
-                                fullWidth
-                            />
-                        </FlexContainer>
-                        <Select
-                            options={sellerTypeOptions}
-                            name="sellerType"
-                            label="Seller Type"
-                            placeholder="Seller Type"
-                        />
-                        <TextInput
-                            label="keyword"
-                            name="keyword"
-                            type="text"
-                            placeholder="Keyword"
-                            searchStyle
-                            noLabel
-                        />
                         <FlexContainer dir="column">
                             <Submit
                                 type="submit"
                                 isSubmitting={isSubmitting}
                                 text="Search"
-                                searchStyle
                             />
                         </FlexContainer>
                     </Form>
