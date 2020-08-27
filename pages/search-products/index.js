@@ -5,18 +5,21 @@ import { FlexContainer } from "../../components/styles/Page"
 import { AdBanner } from "../../components/AdBanner"
 import { Filter } from "../../components/Filter"
 import { ProductGrid } from "../../components/ProductGrid"
+import SearchPageTemplate from "../../templates/SearchPageTemplate"
 
-const SearchPage = ({ category }) => {
+const SearchPage = ({ category, subcategory }) => {
     return (
         <>
-            <InnerPageBanner />
-            <ComponentContainer>
-                <FlexContainer>
-                    <Filter category={category} />
-                    <ProductGrid />
-                </FlexContainer>
-                <AdBanner />
-            </ComponentContainer>
+            <SearchPageTemplate>
+                <ComponentContainer>
+                    <FlexContainer>
+                        <Filter category={category} subcategory={subcategory} />
+                        <ProductGrid />
+                    </FlexContainer>
+                    <AdBanner margin="90px 0 0 0" />
+                </ComponentContainer>
+            </SearchPageTemplate>
+
         </>
     )
 }

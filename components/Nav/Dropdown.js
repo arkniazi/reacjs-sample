@@ -30,7 +30,8 @@ export const Dropdown = ({ data, type, active, handleDropDownChange }) => {
                                         return (
                                             <li>
                                                 <TextLink
-                                                    url={link.url}
+                                                    url="/search-products/[...param]"
+                                                    as="/search-products/surf/shortboard"
                                                     color={
                                                         type === "blue"
                                                             ? "white"
