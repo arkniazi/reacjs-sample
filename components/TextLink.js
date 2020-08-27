@@ -16,18 +16,6 @@ const BaseLink = styled.a`
     text-transform: uppercase;
     cursor: pointer;
     position: relative;
-    /* &:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        left: 0;
-        height: 2px;
-        background: ${(props) => props.theme.colors.orange};
-        transform: translateY(0px);
-        opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    } */
     &:hover {
         &:after {
             transform: translateY(3px);
@@ -48,7 +36,7 @@ const StyledLinkWhite = styled(BaseLink)`
     color: white;
 `
 
-const TextLink = ({ url, color, text, size, weight, className }) => {
+const TextLink = ({ url, as, color, text, size, weight, className }) => {
     const StyledLink =
         color === "blue"
             ? StyledLinkBlue
@@ -58,7 +46,7 @@ const TextLink = ({ url, color, text, size, weight, className }) => {
 
     return (
         <>
-            <Link href={url} passHref>
+            <Link href={url} as={as} passHref>
                 <StyledLink size={size} weight={weight} className={className}>
                     {text}
                 </StyledLink>

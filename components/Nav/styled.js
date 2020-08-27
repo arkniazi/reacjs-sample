@@ -61,6 +61,7 @@ export const DropdownStyled = styled.div`
             ? props.theme.colors.white
             : ""};
     pointer-events: ${(props) => (props.active ? "" : "none")};
+    z-index: 2;
     &.active {
         opacity: 1;
     }
