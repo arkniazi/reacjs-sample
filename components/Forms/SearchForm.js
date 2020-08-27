@@ -5,8 +5,8 @@ import { FlexContainer } from "../styles/Page"
 import { TextInput } from "../FormFields/TextInput"
 import { Select } from "../FormFields/Select"
 import { Submit } from "../FormFields/Submit"
-
-import { RadioCategorySection } from "./sections/RadioCategorySection"
+import { Radio } from "../FormFields/Radio"
+import { InputFlexSection } from "./sections/InputFlexSection"
 
 import {
     radiusOptions,
@@ -47,14 +47,26 @@ export const SearchForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <RadioCategorySection />
+                        <InputFlexSection justify="space-between">
+                            <Radio
+                                label="Surf"
+                                name="category"
+                                type="radio"
+                                value="surf"
+                            />
+                            <Radio label="Sup" name="category" type="radio" value="sup" />
+                            <Radio label="Kitesurf" name="category" type="radio" value="kitesurf" />
+                            <Radio label="Foil" name="category" type="radio" value="foil" />
+                            <Radio label="Wetsuit" name="category" type="radio" value="wetsuit" />
+                        </InputFlexSection>
 
                         <TextInput
                             label="location"
                             name="location"
                             type="text"
                             placeholder="Location"
-                            searchStyle
+                            marginBottom="1.8rem"
+                            altStyle
                             noLabel
                         />
                         <FlexContainer>
@@ -102,7 +114,7 @@ export const SearchForm = () => {
                             name="keyword"
                             type="text"
                             placeholder="Keyword"
-                            searchStyle
+                            altStyle
                             noLabel
                         />
                         <FlexContainer dir="column">

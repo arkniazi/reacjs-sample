@@ -49,7 +49,7 @@ export const Radio = ({ label, required, className, fullWidth, ...props }) => {
     const [field, meta] = useField(props)
 
     return (
-        <InputWrapper fullWidth={fullWidth}>
+        <InputWrapper className={className} fullWidth={fullWidth}>
             <LabelStyled>
                 <RadioStyled {...field} {...props} />
                 <p>{label}</p>

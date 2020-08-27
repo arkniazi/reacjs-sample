@@ -118,4 +118,5 @@ export const GlobalStyle = createGlobalStyle`
         font-weight: bold;
         font-family: ${theme.font.heading};
     }
+
 `
