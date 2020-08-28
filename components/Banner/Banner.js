@@ -1,13 +1,13 @@
 import { StyledBanner } from "./styled"
 import { Image } from "../Image"
-import { publicUrl } from "../../config"
+
 import { ComponentContainer } from "../styles/Page"
 import { BannerDecoration } from "../BannerDecoration"
 import { SearchForm } from "../Forms/SearchForm"
 
 export const Banner = ({ paddingTop }) => {
     return (
-        <StyledBanner imgURL={publicUrl + "/images/banner/banner-background.png"}>
+        <StyledBanner imgURL="/images/banner/banner-background.png">
             <ComponentContainer>
                 <Image
                     className="styledBanner__feature-img"

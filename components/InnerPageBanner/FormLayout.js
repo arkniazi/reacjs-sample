@@ -2,13 +2,12 @@ import { FlexContainer } from "../styles/Page"
 import { BannerDecoration } from "../BannerDecoration"
 import { ContactForm } from "../Forms/ContactForm"
 import { FormLayoutStyled } from "./styled"
-import { publicUrl } from "../../config"
 import { ComponentContainer } from "../styles/Page"
 
 export const FormLayout = () => {
     return (
         <FormLayoutStyled
-            imgURL={publicUrl + "/images/banner/banner-background.png"}
+            imgURL="/images/banner/banner-background.png"
         >
             <ComponentContainer>
                 <FlexContainer>

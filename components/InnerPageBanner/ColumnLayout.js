@@ -2,13 +2,12 @@ import { Image } from "../Image"
 import { BannerDecoration } from "../BannerDecoration"
 import { FlexContainer } from "../styles/Page"
 import { ColumnLayoutStyled } from "./styled"
-import { publicUrl } from "../../config"
 import { ComponentContainer } from "../styles/Page"
 
 export const ColumnLayout = () => {
     return (
         <ColumnLayoutStyled
-            imgURL={publicUrl + "/images/banner/banner-background.png"}
+            imgURL="/images/banner/banner-background.png"
         >
             <ComponentContainer>
                 <h2 className="h1 columnLayoutStyled__title">

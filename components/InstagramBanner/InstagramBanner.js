@@ -1,7 +1,6 @@
 import { InstagramBannerStyled, ImageGrid } from "./styled"
 import { ComponentContainer } from "../styles/Page"
 import { Image } from "../Image"
-import { publicUrl } from "../../config"
 import { FlexContainer } from "../styles/Page"
 import { Instagram } from "../Icons"
 
@@ -19,7 +18,7 @@ const placeholderLinks = [
 export const InstagramBanner = () => {
     return (
         <InstagramBannerStyled
-            imgURL={publicUrl + "/images/banner/banner-background.png"}
+            imgURL="/images/banner/banner-background.png"
         >
             <ComponentContainer>
                 <FlexContainer dir="row">
