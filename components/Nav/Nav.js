@@ -44,10 +44,10 @@ export const Nav = ({ color }) => {
             window.pageYOffset !== undefined
                 ? window.pageYOffset
                 : (
-                      document.documentElement ||
-                      document.body.parentNode ||
-                      document.body
-                  ).scrollTop
+                    document.documentElement ||
+                    document.body.parentNode ||
+                    document.body
+                ).scrollTop
         if (scrollTop >= 15) {
             handleDropDownChange(false, false, false)
         }
@@ -80,7 +80,7 @@ export const Nav = ({ color }) => {
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("surf")}>
                     <TextLink
                         as="/search-products/surf"
-                        url="/search-products/[category]"
+                        url="/search-products/[...param]"
                         color={color}
                         text="Surf"
                     />
@@ -89,7 +89,7 @@ export const Nav = ({ color }) => {
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("sup")}>
                     <TextLink
-                        url="/search-products/[category]"
+                        url="/search-products/[...param]"
                         as="/search-products/sup"
                         color={color}
                         text="Sup"
@@ -99,7 +99,7 @@ export const Nav = ({ color }) => {
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav()}>
                     <TextLink
-                        url="/search-products/[category]"
+                        url="/search-products/[...param]"
                         as="/search-products/kitesurf"
                         color={color}
                         text="Kitesurf"
@@ -108,7 +108,7 @@ export const Nav = ({ color }) => {
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav()}>
                     <TextLink
-                        url="/search-products/[category]"
+                        url="/search-products/[...param]"
                         as="/search-products/foil"
                         color={color}
                         text="Foil"
@@ -117,7 +117,7 @@ export const Nav = ({ color }) => {
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("wetsuit")}>
                     <TextLink
-                        url="/search-products/[category]"
+                        url="/search-products/[...param]"
                         as="/search-products/wetsuit"
                         color={color}
                         text="Wetsuit"
