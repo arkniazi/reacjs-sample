@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import { useFormikContext, Formik, Form, FieldArray } from 'formik'
 import * as Yup from "yup"
 import { FlexContainer } from "../styles/Page"
 import { TextInput } from "../FormFields/TextInput"
@@ -8,11 +7,15 @@ import { RadioBoxed } from "../FormFields/Radio/RadioBoxed"
 import { SelectFilter } from "../FormFields/SelectFilter"
 import { Submit } from "../FormFields/Submit"
 import { Checkbox } from "../FormFields/Checkbox"
+import { FilterTag } from "../FormFields/FilterTag"
+
 import {
     categoryOptions,
     maxPriceOptions,
     minPriceOptions,
 } from "./FilterFormOptions"
+
+
 
 export const FilterForm = () => {
     const InitialValues = {
@@ -29,6 +32,8 @@ export const FilterForm = () => {
         location: Yup.string().required("Required"),
     })
 
+
+
     return (
         <div>
             <Formik
@@ -42,10 +47,50 @@ export const FilterForm = () => {
                     }, 400)
                 }}
             >
-                {({ isSubmitting }) => (
+                {({ isSubmitting, handleSubmit, handleChange, values }) => (
                     <>
 
                         <Form>
+
+                            <InputFlexSection>
+                                {values.category && values.category.length > 0 && (
+
+                                    <FilterTag>
+                                        {values.category}
+                                    </FilterTag>
+
+                                )}
+                                {values.location && values.location.length > 0 && (
+
+                                    <FilterTag>{values.location}</FilterTag>
+                                )}
+                                {values.radius && values.radius.length > 0 && (
+
+                                    <FilterTag>{values.radius}km</FilterTag>
+                                )}
+                                {values.minPrice && values.minPrice.length > 0 && (
+
+                                    <FilterTag>{values.minPrice}</FilterTag>
+                                )}
+                                {values.maxPrice && values.maxPrice.length > 0 && (
+
+                                    <FilterTag>{values.maxPrice}</FilterTag>
+                                )}
+                                {values.condition && values.condition.length > 0 && (
+                                    values.condition.map((condition, index) => (
+                                        <FilterTag key={index}>
+                                            {condition}
+                                        </FilterTag>
+                                    ))
+                                )}
+                                {values.sellerType && values.sellerType.length > 0 && (
+                                    values.sellerType.map((sellerType, index) => (
+                                        <FilterTag key={index}>{sellerType}</FilterTag>
+                                    ))
+                                )}
+
+                            </InputFlexSection>
+
                             <SelectFilter
                                 options={categoryOptions}
                                 name="category"
@@ -137,6 +182,7 @@ export const FilterForm = () => {
                                     text="Search"
                                 />
                             </FlexContainer>
+
                         </Form>
                     </>
                 )}

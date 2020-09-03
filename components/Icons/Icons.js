@@ -149,6 +149,36 @@ export const Search = ({ height, width, fill, className }) => {
     )
 }
 
+export const GridIcon = ({ height, width, fill, opacity, onClick, className }) => {
+    return (
+        <svg width={width || '31'} height={height || '30'} viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClick} className={className}>
+            <g opacity={opacity ? '1' : '0.4'}>
+                <rect x="16.7162" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="16.7162" y="16.5671" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="0.149048" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="16.5671" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+            </g>
+        </svg>
+
+    )
+}
+
+export const HorizontalViewIcon = ({ height, width, fill, opacity, onClick, className }) => {
+    return (
+        <svg width={width || '34'} height={height || '30'} viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClick} className={className}>
+            <g opacity={opacity ? '1' : '0.4'}>
+                <rect x="11.1186" y="2.03394" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+                <rect x="11.1186" y="13.2203" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="11.1865" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+                <rect x="11.1186" y="24.4067" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="22.3728" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+            </g>
+        </svg>
+
+    )
+}
+
 Instagram.defaultProps = {
     fill: "white",
 }

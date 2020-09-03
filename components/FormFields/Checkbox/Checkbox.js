@@ -77,8 +77,6 @@ export const CheckboxStyled = styled.label`
 export const Checkbox = ({ children, name, ...props }) => {
     const [field, meta] = useField(name);
 
-    console.log(field);
-
     return (
         <CheckboxWrap className={props.className}>
             <CheckboxStyled className='container-checkbox'>
