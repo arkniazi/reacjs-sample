@@ -14,7 +14,6 @@ export const TextInputStyles = css`
         props.altStyle ? props.theme.font.heading : props.theme.font.body};
     padding: 1rem;
     width: 100%;
-    margin-bottom: ${(props) => (props.marginBottom ? props.marginBottom : "1.1rem")};
     transition: ${(props) => props.theme.transitions.default};
     color: ${(props) => (props.color ? props.color : props.theme.colors.white)};
     ::-webkit-input-placeholder {

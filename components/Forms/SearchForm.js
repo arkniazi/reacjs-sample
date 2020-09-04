@@ -7,6 +7,7 @@ import { Select } from "../FormFields/Select"
 import { Submit } from "../FormFields/Submit"
 import { Radio } from "../FormFields/Radio"
 import { InputFlexSection } from "./sections/InputFlexSection"
+import { FormInputWrapper } from '../FormFields/FormInputWrapper'
 
 import {
     radiusOptions,
@@ -47,76 +48,93 @@ export const SearchForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <InputFlexSection justify="space-between">
-                            <Radio
-                                label="Surf"
-                                name="category"
-                                type="radio"
-                                value="surf"
-                            />
-                            <Radio label="Sup" name="category" type="radio" value="sup" />
-                            <Radio label="Kitesurf" name="category" type="radio" value="kitesurf" />
-                            <Radio label="Foil" name="category" type="radio" value="foil" />
-                            <Radio label="Wetsuit" name="category" type="radio" value="wetsuit" />
-                        </InputFlexSection>
+                        <FormInputWrapper margin="0 0 30px 0">
+                            <InputFlexSection justify="space-between">
+                                <Radio
+                                    label="Surf"
+                                    name="category"
+                                    type="radio"
+                                    value="surf"
+                                />
+                                <Radio label="Sup" name="category" type="radio" value="sup" />
+                                <Radio label="Kitesurf" name="category" type="radio" value="kitesurf" />
+                                <Radio label="Foil" name="category" type="radio" value="foil" />
+                                <Radio label="Wetsuit" name="category" type="radio" value="wetsuit" />
+                            </InputFlexSection>
+                        </FormInputWrapper>
 
-                        <TextInput
-                            label="location"
-                            name="location"
-                            type="text"
-                            placeholder="Location"
-                            marginBottom="1.8rem"
-                            altStyle
-                            noLabel
-                        />
-                        <FlexContainer>
-                            <Select
-                                options={radiusOptions}
-                                name="radius"
-                                label="Radius"
-                                fullWidth
-                                placeholder="Radius"
-                                defaultValue="Radius"
+                        <FormInputWrapper margin="0 0 20px 0">
+                            <TextInput
+                                label="location"
+                                name="location"
+                                type="text"
+                                placeholder="Location"
+                                marginBottom="1.8rem"
+                                altStyle
+                                noLabel
                             />
-                            <Select
-                                options={conditionOptions}
-                                name="condition"
-                                label="Condition"
-                                placeholder="Condition"
-                                fullWidth
-                            />
-                        </FlexContainer>
+                        </FormInputWrapper>
 
-                        <FlexContainer>
+                        <FormInputWrapper margin="0 0 20px 0">
+                            <FlexContainer>
+                                <Select
+                                    options={radiusOptions}
+                                    name="radius"
+                                    label="Radius"
+                                    fullWidth
+                                    placeholder="Radius"
+                                    defaultValue="Radius"
+                                />
+                                <Select
+                                    options={conditionOptions}
+                                    name="condition"
+                                    label="Condition"
+                                    placeholder="Condition"
+                                    fullWidth
+                                />
+                            </FlexContainer>
+                        </FormInputWrapper>
+
+                        <FormInputWrapper margin="0 0 20px 0">
+                            <FlexContainer>
+                                <Select
+                                    options={minPriceOptions}
+                                    name="minPrice"
+                                    label="Min Price"
+                                    placeholder="Min Price"
+                                    fullWidth
+                                />
+                                <Select
+                                    options={maxPriceOptions}
+                                    name="maxPrice"
+                                    label="Max Price"
+                                    placeholder="Max Price"
+                                    fullWidth
+                                />
+                            </FlexContainer>
+                        </FormInputWrapper>
+
+                        <FormInputWrapper margin="0 0 20px 0">
                             <Select
-                                options={minPriceOptions}
-                                name="minPrice"
-                                label="Min Price"
-                                placeholder="Min Price"
-                                fullWidth
+                                options={sellerTypeOptions}
+                                name="sellerType"
+                                label="Seller Type"
+                                placeholder="Seller Type"
                             />
-                            <Select
-                                options={maxPriceOptions}
-                                name="maxPrice"
-                                label="Max Price"
-                                placeholder="Max Price"
-                                fullWidth
+                        </FormInputWrapper>
+
+                        <FormInputWrapper margin="0 0 20px 0">
+                            <TextInput
+                                label="keyword"
+                                name="keyword"
+                                type="text"
+                                placeholder="Keyword"
+                                altStyle
+                                noLabel
                             />
-                        </FlexContainer>
-                        <Select
-                            options={sellerTypeOptions}
-                            name="sellerType"
-                            label="Seller Type"
-                            placeholder="Seller Type"
-                        />
-                        <TextInput
-                            label="keyword"
-                            name="keyword"
-                            type="text"
-                            placeholder="Keyword"
-                            altStyle
-                            noLabel
-                        />
+                        </FormInputWrapper>
+
+
                         <FlexContainer dir="column">
                             <Submit
                                 type="submit"
