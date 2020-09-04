@@ -10,7 +10,6 @@ import { customStyles } from "./styled"
 
 const SelectFilterContainerStyled = styled.div`
     width: ${(props) => (props.fullWidth ? "100%" : "initial")};
-    margin-bottom: 40px;
     &:nth-child(1) {
         margin-right: ${(props) => (props.fullWidth ? "9px" : "initial")};
     }

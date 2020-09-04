@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
     cursor: pointer;
     position: relative;
     height: 60px;
-    width: 150px;
+    padding: 0 20px;
     font-weight: bold;
     border: none;
     color: ${(props) => props.theme.colors.black};
@@ -94,8 +94,8 @@ export const Submit = ({
                 {isSubmitting
                     ? props.submittingText || "Searching..."
                     : text
-                    ? text
-                    : "Search"}
+                        ? text
+                        : "Search"}
             </div>
 
             <div className="icon-container">
@@ -114,21 +114,21 @@ export const Submit = ({
             </div>
         </SearchButtonStyled>
     ) : (
-        <ButtonStyled
-            type={type || "submit"}
-            disabled={isSubmitting}
-            disablePointer={isSubmitting}
-            disabledStyle={isSubmitting}
-            refineResults={refineResults}
-            {...props}
-        >
-            {isSubmitting
-                ? props.submittingText || "Submitting..."
-                : text
-                ? text
-                : "Submit"}
-        </ButtonStyled>
-    )
+            <ButtonStyled
+                type={type || "submit"}
+                disabled={isSubmitting}
+                disablePointer={isSubmitting}
+                disabledStyle={isSubmitting}
+                refineResults={refineResults}
+                {...props}
+            >
+                {isSubmitting
+                    ? props.submittingText || "Submitting..."
+                    : text
+                        ? text
+                        : "Submit"}
+            </ButtonStyled>
+        )
 
     return btn
 }

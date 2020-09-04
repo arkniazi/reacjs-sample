@@ -7,13 +7,20 @@ import { TextInput } from "../FormFields/TextInput"
 import { TextArea } from "../FormFields/TextArea"
 import { Submit } from "../FormFields/Submit"
 import { FlexContainer } from "../styles/Page"
+import { FormInputWrapper } from '../FormFields/FormInputWrapper'
+
+
 export const ContactForm = () => {
     const InitialValues = {
         email: "",
         password: "",
-    }
+        phone: "",
+        company: "",
+        location: "",
+        subject: "",
+        message: ""
 
-    //const phoneRegExp = /^(?:\+?(61))? ?(?:\((?=.*\)))?(0?[2-57-8])\)? ?(\d\d(?:[- ](?=\d{3})|(?!\d\d[- ]?\d[- ]))\d\d[- ]?\d[- ]?\d{3})$/
+    }
 
     const validationSchema = Yup.object({
         name: Yup.string()
@@ -37,63 +44,79 @@ export const ContactForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <TextInput
-                            label="name"
-                            name="name"
-                            type="text"
-                            placeholder="Name"
-                            noLabel
-                        />
-                        <FlexContainer>
+                        <FormInputWrapper margin="0 0 10px 0">
                             <TextInput
-                                label="email"
-                                name="email"
-                                type="email"
-                                placeholder="Email"
-                                fullWidth
-                                noLabel
-                            />
-                            <TextInput
-                                label="phone"
-                                name="phone"
+                                label="name"
+                                name="name"
                                 type="text"
-                                placeholder="Phone"
-                                fullWidth
+                                placeholder="Name"
                                 noLabel
                             />
-                        </FlexContainer>
-                        <FlexContainer>
-                            <TextInput
-                                label="company"
-                                name="company"
-                                type="text"
-                                placeholder="Company"
-                                fullWidth
-                                noLabel
-                            />
-                            <TextInput
-                                label="location"
-                                name="location"
-                                type="text"
-                                placeholder="Location"
-                                fullWidth
-                                noLabel
-                            />
-                        </FlexContainer>
-                        <TextInput
-                            label="subject"
-                            name="subject"
-                            type="text"
-                            placeholder="Subject"
-                            noLabel
-                        />
+                        </FormInputWrapper>
 
-                        <TextArea
-                            label="Your Message"
-                            name="message"
-                            type="textarea"
-                            placeholder="Your Message"
-                        />
+                        <FormInputWrapper margin="0 0 10px 0">
+                            <FlexContainer>
+                                <TextInput
+                                    label="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="Email"
+                                    fullWidth
+                                    noLabel
+                                />
+                                <TextInput
+                                    label="phone"
+                                    name="phone"
+                                    type="text"
+                                    placeholder="Phone"
+                                    fullWidth
+                                    noLabel
+                                />
+                            </FlexContainer>
+                        </FormInputWrapper>
+
+                        <FormInputWrapper margin="0 0 10px 0">
+                            <FlexContainer>
+                                <TextInput
+                                    label="company"
+                                    name="company"
+                                    type="text"
+                                    placeholder="Company"
+                                    fullWidth
+                                    noLabel
+                                />
+                                <TextInput
+                                    label="location"
+                                    name="location"
+                                    type="text"
+                                    placeholder="Location"
+                                    fullWidth
+                                    noLabel
+                                />
+                            </FlexContainer>
+                        </FormInputWrapper>
+
+                        <FormInputWrapper margin="0 0 10px 0">
+                            <TextInput
+                                label="subject"
+                                name="subject"
+                                type="text"
+                                placeholder="Subject"
+                                noLabel
+                            />
+                        </FormInputWrapper>
+
+
+                        <FormInputWrapper margin="0 0 10px 0">
+                            <TextArea
+                                label="Your Message"
+                                name="message"
+                                type="textarea"
+                                placeholder="Your Message"
+                            />
+                        </FormInputWrapper>
+
+
                         <FlexContainer dir="column">
                             <Submit
                                 type="submit"

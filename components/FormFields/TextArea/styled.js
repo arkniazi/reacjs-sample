@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components"
 
 const TextAreaStyles = css`
-    margin-bottom: 1.25rem;
     position: relative;
     border: 2px solid ${(props) => props.theme.colors.white};
 `
@@ -15,8 +14,8 @@ export const TextAreaStyled = styled.textarea`
     transition: ${(props) => props.theme.transitions.default};
     resize: none;
     padding: 1.25rem;
-    border: 2px solid ${(props) => props.theme.colors.white};
-    color: ${(props) => props.theme.colors.white};
+    border: 2px solid ${(props) => props.color ? props.color : props.theme.colors.white};
+    color: ${(props) => props.color ? props.color : props.theme.colors.white};
     ${"" /* don't want to double up on border rules*/}
     ${(props) =>
         !props.maxLength &&
@@ -25,7 +24,7 @@ export const TextAreaStyled = styled.textarea`
     `}
 
     ::-webkit-input-placeholder {
-        color: ${(props) => props.theme.colors.white};
+        color: ${(props) => props.color ? props.color : props.theme.colors.white};
         opacity: 1;
     }
 
@@ -37,7 +36,7 @@ export const TextAreaStyled = styled.textarea`
     &:focus,
     &:hover {
         outline: none;
-        border-color: ${(props) => props.theme.colors.lightGrey};
+        border-color: ${(props) => props.theme.colors.borderGrey};
     }
 `
 
