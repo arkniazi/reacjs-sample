@@ -1,6 +1,6 @@
 import gql from "graphql-tag"
 import { ComponentContainer, FlexContainer } from "../styles/Page"
-import { ImageGallery } from '../ImageGallery'
+import { ImageGalleryComponent } from '../ImageGalleryComponent'
 
 import { SingleItemStyled } from "./styled"
 import { Intro } from "./Intro"
@@ -17,7 +17,7 @@ const SingleItemComponent = ({ id }) => {
                 <div className="singleItem">
                     <FlexContainer dir="row">
                         <div className="singleItem__column">
-                            <ImageGallery images={item.galleryImages} />
+                            <ImageGalleryComponent images={item.galleryImages} />
                         </div>
                         <div className="singleItem__column copy-col">
                             <div>

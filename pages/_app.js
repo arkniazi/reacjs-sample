@@ -4,6 +4,9 @@ import { ApolloProvider } from "react-apollo"
 import withData from "../lib/withData"
 import Page from "../components/Page"
 
+import "react-image-gallery/styles/scss/image-gallery.scss"
+import "../components/styles/vendor/react-image-gallery.scss"
+
 class MyApp extends App {
     //getInitialProps() = next js lifecycle method, will run first before the first render
     //anything returned will be exposed as props in the render method

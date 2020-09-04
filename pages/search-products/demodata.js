@@ -8,10 +8,22 @@ export const searchResults = [
         price: '320.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
@@ -24,10 +36,22 @@ export const searchResults = [
         price: '370.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
@@ -40,10 +64,22 @@ export const searchResults = [
         price: '120.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
@@ -56,10 +92,22 @@ export const searchResults = [
         price: '420.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf'
     },
@@ -71,10 +119,22 @@ export const searchResults = [
         price: '420.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
@@ -87,10 +147,22 @@ export const searchResults = [
         price: '420.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
@@ -103,10 +175,22 @@ export const searchResults = [
         price: '420.00',
         imagePath: '/images/products/demo_product.png',
         galleryImages: [
-            '/images/products/demo_product_gallery_01.jpg',
-            '/images/products/demo_product_gallery_02.jpg',
-            '/images/products/demo_product_gallery_03.jpg',
-            '/images/products/demo_product_gallery_04.jpg'
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
         ],
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
