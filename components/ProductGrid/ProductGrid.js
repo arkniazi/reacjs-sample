@@ -1,21 +1,34 @@
-import { useState } from "react"
+
 import { ProductGridStyled } from "./styled"
-import { ViewSwitch } from "./ViewSwitch"
+import { GridTease, HorizontalTease } from "../Tease"
 
-export const ProductGrid = () => {
-    const [view, updateView] = useState('grid')
 
-    const handleViewUpdate = (type) => {
-        updateView(type)
-    }
+export const ProductGrid = ({ view, searchResults }) => {
+    let gridView = view === 'grid' ? true : false;
+    let horizontalView = view === 'horizontal' ? true : false;
 
     return (
         <ProductGridStyled>
-            <ViewSwitch current={view} handleViewUpdate={handleViewUpdate} />
-            <p>{view}</p>
-            <div className="ProductGrid">
-                <p>IM A PRODUCT GRID</p>
-            </div>
+
+            {searchResults.map(result => {
+                if (gridView) {
+                    return (
+                        <GridTease
+                            result={result}
+                        />
+                    )
+                }
+
+                if (horizontalView) {
+                    return (
+                        <HorizontalTease
+                            result={result}
+                        />
+                    )
+                }
+
+
+            })}
         </ProductGridStyled>
     )
 }

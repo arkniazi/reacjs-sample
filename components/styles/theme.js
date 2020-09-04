@@ -9,6 +9,7 @@ export const theme = {
         themeBlue: "#179AD3",
         darkBlue: "#005CB0",
         lightGrey: "rgba(255,255,255,0.4)",
+        borderGrey: "#ECEDEF"
     },
     font: {
         body: "'Montserrat', sans-serif",

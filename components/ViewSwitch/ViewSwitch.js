@@ -1,9 +1,9 @@
 import { ViewSwitchStyled } from "./styled"
 import { GridIcon, HorizontalViewIcon } from "../Icons"
 
-export const ViewSwitch = ({ handleViewUpdate, current }) => {
-    let gridView = current === 'grid' ? true : false;
-    let horizontalView = current === 'horizontal' ? true : false;
+export const ViewSwitch = ({ handleViewUpdate, view }) => {
+    let gridView = view === 'grid' ? true : false;
+    let horizontalView = view === 'horizontal' ? true : false;
 
 
     return (
