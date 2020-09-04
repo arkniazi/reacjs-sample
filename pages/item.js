@@ -1,14 +1,14 @@
-import SingleItemTemplate from "../templates/SingleItemPageTemplate"
-import { SingleItem } from "../components/SingleItem"
-import { AdBanner } from "../components/AdBanner"
+// import SingleItemTemplate from "../templates/SingleItemPageTemplate"
+// import { SingleItem } from "../components/SingleItem"
+// import { AdBanner } from "../components/AdBanner"
 
-const Item = ({ ...props }) => {
-    return (
-        <SingleItemTemplate>
-            <SingleItem id={props.query.id} />
-            <AdBanner />
-        </SingleItemTemplate>
-    )
-}
+// const Item = ({ ...props }) => {
+//     return (
+//         <SingleItemTemplate>
+//             <SingleItem id={props.query.id} />
+//             <AdBanner />
+//         </SingleItemTemplate>
+//     )
+// }
 
-export default Item
+// export default Item

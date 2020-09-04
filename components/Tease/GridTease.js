@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import { Image } from "../Image"
-import styled from "styled-components"
 import { FavouriteProductIcon } from '../Icons'
 import { GridTeaseStyled } from "./styled"
+import TextLink from "../TextLink"
 
-
-export const GridTease = ({ result: { imagePath, price, title, description, volume, metricLength } }) => {
+export const GridTease = ({ result: { imagePath, price, title, description, id, volume, metricLength } }) => {
     const [favourite, setFavourite] = useState(false) //default set by data, hardcoded for now
 
     const handleSetFavourite = () => {
@@ -26,6 +25,16 @@ export const GridTease = ({ result: { imagePath, price, title, description, volu
 
                 <div>
                     <p className="gridViewStyled__title">{title}</p>
+
+
+                    <TextLink
+                        url="/single-item/[id]"
+                        as={`/single-item/${id}`}
+                        color="black"
+                        text={title}
+                    />
+
+
                     <p className="gridViewStyled__meta">{metricLength} + {volume}</p>
                 </div>
             </div>

@@ -1,1 +1,1 @@
-export * from "./SingleItem"
+export * from "./SingleItemComponent"
