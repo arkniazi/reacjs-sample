@@ -1,7 +1,7 @@
 
 import { Formik, Form } from "formik"
 import { Select } from "../FormFields/Select"
-import { Submit } from "../FormFields/Submit"
+import { FormInputWrapper } from '../FormFields/FormInputWrapper'
 
 export const SingleItemVariationForm = ({ options, handleSetItemSize }) => {
     const InitialValues = {
@@ -24,16 +24,18 @@ export const SingleItemVariationForm = ({ options, handleSetItemSize }) => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <Select
-                            options={options}
-                            name={fieldName}
-                            label={fieldName}
-                            fullWidth
-                            placeholder="Select Size"
-                            defaultValue="Select Size"
-                            style="inverse"
-                            submitOnChange
-                        />
+                        <FormInputWrapper margin="0 0 40px 0">
+                            <Select
+                                options={options}
+                                name={fieldName}
+                                label={fieldName}
+                                fullWidth
+                                placeholder="Select Size"
+                                defaultValue="Select Size"
+                                style="inverse"
+                                submitOnChange
+                            />
+                        </FormInputWrapper>
                     </Form>
                 )}
             </Formik>

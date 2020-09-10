@@ -7,6 +7,8 @@ import { Submit } from "../FormFields/Submit"
 import { FlexContainer } from "../styles/Page"
 import TextLink from "../TextLink"
 import { PhoneIcon } from '../Icons'
+import { FormInputWrapper } from '../FormFields/FormInputWrapper'
+
 
 const LinkWrapperStyled = styled.div`
     display: flex;
@@ -52,13 +54,16 @@ export const MessageSellerForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <TextArea
-                            label="Your Message"
-                            name="message"
-                            type="textarea"
-                            placeholder="Write a private message"
-                            color="black"
-                        />
+                        <FormInputWrapper margin="0 0 20px 0">
+                            <TextArea
+                                label="Your Message"
+                                name="message"
+                                type="textarea"
+                                placeholder="Write a private message"
+                                color="black"
+                            />
+                        </FormInputWrapper>
+
                         <FlexContainer dir="row">
                             <Submit
                                 type="submit"

@@ -57,6 +57,14 @@ export const FormLayoutStyled = styled.div`
     background-repeat: no-repeat;
     margin-bottom: -1px;
 
+    h1{
+        margin-bottom: 50px;
+    }
+
+    p.lead{
+        margin-top: 45px;
+    }
+
     .formLayout {
         &__column {
             flex: 1 0 0;
