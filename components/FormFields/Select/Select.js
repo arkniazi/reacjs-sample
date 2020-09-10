@@ -44,8 +44,9 @@ export const Select = ({
 
     const handleOnChange = (option) => {
         setFieldValue(name, option ? option.value : "")
-        // submitForm()
-        // console.log(name)
+        if (submitOnChange) {
+            submitForm()
+        }
     }
 
     if (!value && freeText) {
