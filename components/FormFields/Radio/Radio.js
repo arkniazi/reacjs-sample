@@ -1,4 +1,5 @@
-import { useField } from "formik"
+
+import { useField, useFormikContext } from "formik"
 import styled, { css } from "styled-components"
 import { Error } from "../Error"
 
@@ -8,7 +9,7 @@ const InputWrapper = styled.div`
 `
 const LabelStyled = styled.label`
     border-bottom: ${(props) => props.active && "1px solid"};
-    color: ${(props) => props.theme.colors.white};
+    color: ${(props) => props.color ? props.color : props.theme.colors.white};
     font-family: ${(props) => props.theme.font.heading};
     text-transform: uppercase;
     font-weight: bold;
@@ -45,13 +46,29 @@ const RadioStyled = styled.input`
     }
 `
 
-export const Radio = ({ label, required, className, fullWidth, ...props }) => {
-    const [field, meta] = useField(props)
+export const Radio = ({ label, required, className, fullWidth, submitOnChange, color, ...props }) => {
+    const [field, meta] = useField(props.name)
+
+    const { setFieldValue, setFieldTouched, submitForm } = useFormikContext()
+
+    const handleOnChange = (name, value, selfSubmit) => {
+        setFieldValue(name, value);
+
+        if (selfSubmit) {
+            submitForm()
+        }
+    }
 
     return (
         <InputWrapper className={className} fullWidth={fullWidth}>
-            <LabelStyled>
-                <RadioStyled {...field} {...props} />
+            <LabelStyled color={color}>
+
+                {submitOnChange ? (
+                    <RadioStyled {...field} {...props} onChange={() => handleOnChange(props.name, props.value, submitOnChange)} />
+                ) : (
+                        <RadioStyled {...field} {...props} />
+                    )}
+
                 <p>{label}</p>
             </LabelStyled>
 

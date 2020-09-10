@@ -44,7 +44,8 @@ export const Select = ({
 
     const handleOnChange = (option) => {
         setFieldValue(name, option ? option.value : "")
-        submitForm()
+        // submitForm()
+        // console.log(name)
     }
 
     if (!value && freeText) {
@@ -61,7 +62,7 @@ export const Select = ({
                 name={name}
                 closeMenuOnSelect={true}
                 components={{ animatedComponents, IndicatorSeparator: () => null }}
-                onChange={submitOnChange ? handleOnChange : ''}
+                onChange={handleOnChange}
                 defaultValue={defaultValue}
                 value={value}
                 instanceId={id}

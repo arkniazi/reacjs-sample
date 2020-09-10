@@ -1,7 +1,7 @@
 import TextLink from "../TextLink"
 import { StyledButton } from "./styled"
 
-export const Button = ({ className, btnText, altTheme, url, margin, size }) => {
+export const Button = ({ className, btnText, altTheme, url, as, margin, size }) => {
     return (
         <StyledButton
             className={className}
@@ -13,6 +13,7 @@ export const Button = ({ className, btnText, altTheme, url, margin, size }) => {
                 color={altTheme ? "white" : "black"}
                 text={btnText}
                 url={url}
+                as={as}
             />
         </StyledButton>
     )
