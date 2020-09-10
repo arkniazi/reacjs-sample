@@ -111,12 +111,17 @@ export const GlobalStyle = createGlobalStyle`
         letter-spacing: 0;
     }
 
-    label.label{
-        display: block;
-        margin-bottom: 10px;
+    label.label, .label{
+        margin-bottom: 20px;
         text-transform: uppercase;
         font-weight: bold;
         font-family: ${theme.font.heading};
+        letter-spacing: 0px;
+        line-height: 1.6rem;
+    }
+
+    h4.label{
+        margin-bottom: 0;
     }
 
 `

@@ -19,6 +19,10 @@ const SelectFilterContainerStyled = styled.div`
     }
 `
 
+const LabelStyled = styled.label`
+    display: ${(props) => (props.noLabel == true ? 'none' : 'block')};
+`
+
 const animatedComponents = makeAnimated()
 
 export const SelectFilter = ({
@@ -50,9 +54,9 @@ export const SelectFilter = ({
 
     return (
         <SelectFilterContainerStyled className={className} fullWidth={fullWidth}>
-            <label className="label" htmlFor={name}>
+            <LabelStyled className="label" htmlFor={name} noLabel={noLabel}>
                 {label}
-            </label>
+            </LabelStyled>
             <ReactSelect
                 styles={customStyles}
                 name={name}

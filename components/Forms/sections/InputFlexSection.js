@@ -8,11 +8,16 @@ const InputFlexSectionStyled = styled.div`
     flex-direction: ${(props) => props.direction ? props.direction : 'row'};
 `
 
+
+export const LabelStyled = styled.label`
+    display: ${(props) => (props.noLabel == true ? 'none' : 'block')};
+`
+
 export const InputFlexSection = (props) => {
 
     return (
         <>
-            {props.label && <label className="label" htmlFor={props.name}>{props.name}</label>}
+            <LabelStyled noLabel={props.noLabel} className="label" htmlFor={props.name}>{props.name}</LabelStyled>
 
             <InputFlexSectionStyled justify={props.justify} direction={props.direction}>
                 {props.children}

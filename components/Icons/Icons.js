@@ -29,6 +29,14 @@ export const Exit = ({ className, height, width, fill, onClick }) => {
     )
 }
 
+export const Minus = ({ className, height, width, fill }) => {
+    return (
+        <svg className={className} width={width || "14"} height={height || "3"} viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.63477H15" stroke={fill || "black"} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
 export const ChevronDown = ({ className, height, width, fill }) => {
     return (
         <svg

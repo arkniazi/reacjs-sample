@@ -1,5 +1,4 @@
-import { useFormikContext, Formik, Form, FieldArray } from 'formik'
-import styled from "styled-components"
+import { Formik, Form } from 'formik'
 import * as Yup from "yup"
 import { FlexContainer } from "../styles/Page"
 import { TextInput } from "../FormFields/TextInput"
@@ -10,6 +9,8 @@ import { Submit } from "../FormFields/Submit"
 import { Checkbox } from "../FormFields/Checkbox"
 import { FilterTag } from "../FormFields/FilterTag"
 import { FormInputWrapper } from '../FormFields/FormInputWrapper'
+
+import { AccordionComponent } from '../Accordion';
 
 import {
     categoryOptions,
@@ -134,7 +135,8 @@ export const FilterForm = () => {
                                 </InputFlexSection>
                             </FormInputWrapper>
 
-                            <FormInputWrapper margin="0 0 40px 0">
+                            <AccordionComponent heading="price">
+
                                 <FlexContainer>
                                     <SelectFilter
                                         options={minPriceOptions}
@@ -143,6 +145,7 @@ export const FilterForm = () => {
                                         placeholder="Min Price"
                                         color="black"
                                         fullWidth
+                                        noLabel
                                     />
                                     <SelectFilter
                                         options={maxPriceOptions}
@@ -151,12 +154,14 @@ export const FilterForm = () => {
                                         placeholder="Max Price"
                                         color="black"
                                         fullWidth
+                                        noLabel
                                     />
                                 </FlexContainer>
-                            </FormInputWrapper>
 
-                            <FormInputWrapper margin="0 0 40px 0">
-                                <InputFlexSection label name="condition" direction="column">
+                            </AccordionComponent>
+
+                            <AccordionComponent label="condition">
+                                <InputFlexSection direction="column">
                                     <Checkbox
                                         label="New"
                                         name="condition"
@@ -173,10 +178,10 @@ export const FilterForm = () => {
                                         value="used"
                                     />
                                 </InputFlexSection>
-                            </FormInputWrapper>
+                            </AccordionComponent>
 
-                            <FormInputWrapper margin="0 0 40px 0">
-                                <InputFlexSection label name="seller type" direction="column">
+                            <AccordionComponent label="seller type">
+                                <InputFlexSection direction="column">
                                     <Checkbox
                                         label="Private"
                                         name="sellerType"
@@ -188,7 +193,7 @@ export const FilterForm = () => {
                                         value="shop"
                                     />
                                 </InputFlexSection>
-                            </FormInputWrapper>
+                            </AccordionComponent>
 
                             <FlexContainer dir="column">
                                 <Submit

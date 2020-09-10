@@ -7,7 +7,7 @@ export const AdBanner = ({ margin }) => {
     return (
         <ComponentContainer>
             <AdBannerStyled margin={margin}>
-                <FlexContainer dir="row">
+                <div className="adBannerStyled__flex-container">
                     <div className="adBannerStyled__column">
                         <Image
                             className="adBannerStyled__poster"
@@ -24,7 +24,7 @@ export const AdBanner = ({ margin }) => {
                             alt="banner decoration"
                         />
                     </div>
-                </FlexContainer>
+                </div>
             </AdBannerStyled>
         </ComponentContainer>
     )
