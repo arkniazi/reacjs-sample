@@ -17,25 +17,6 @@ const LabelStyled = styled.label`
     p {
         position: relative;
     }
-    p:after {
-        content: "";
-        width: 100%;
-        height: 4px;
-        background: ${(props) => props.theme.colors.orange};
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: translateY(0px);
-        opacity: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    &:hover {
-        p:after {
-            transform: translateY(4px);
-            opacity: 1;
-        }
-    }
 `
 const RadioStyled = styled.input`
     display: none;
@@ -62,13 +43,7 @@ export const Radio = ({ label, required, className, fullWidth, submitOnChange, c
     return (
         <InputWrapper className={className} fullWidth={fullWidth}>
             <LabelStyled color={color}>
-
-                {submitOnChange ? (
-                    <RadioStyled {...field} {...props} onChange={() => handleOnChange(props.name, props.value, submitOnChange)} />
-                ) : (
-                        <RadioStyled {...field} {...props} />
-                    )}
-
+                <RadioStyled {...field} {...props} onChange={() => handleOnChange(props.name, props.value, submitOnChange)} />
                 <p>{label}</p>
             </LabelStyled>
 

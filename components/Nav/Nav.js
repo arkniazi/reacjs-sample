@@ -74,17 +74,34 @@ export const Nav = ({ color }) => {
         dropdownType = "white"
     }
 
+    const variants = {
+        start: {
+            y: 0,
+            transition: {
+                duration: 0.3,
+                ease: "easeIn"
+            }
+        },
+        hover: {
+            y: 30,
+            transition: {
+                duration: 0.3,
+                ease: "easeOut"
+            }
+        }
+    };
+
     return (
         <StyledNav>
             <div className="menu-wrapper">
-                <StyledNavItem onMouseEnter={() => handleMouseOverNav("surf")}>
+                <StyledNavItem onMouseEnter={() => handleMouseOverNav("surf")} initial="start" whileHover="hover" animate="start">
                     <TextLink
                         as="/search-products/surf"
                         url="/search-products/[...param]"
                         color={color}
                         text="Surf"
                     />
-                    <ChevronDown className="styledNavItem__icon" />
+                    <ChevronDown variants={variants} className="styledNavItem__icon" />
                 </StyledNavItem>
 
                 <StyledNavItem onMouseEnter={() => handleMouseOverNav("sup")}>

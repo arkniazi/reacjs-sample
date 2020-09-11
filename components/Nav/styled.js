@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { theme } from "../styles/theme"
+import { motion } from 'framer-motion';
 
 export const StyledNav = styled.div`
     display: flex;
@@ -17,7 +18,7 @@ export const StyledNav = styled.div`
     }
 `
 
-export const StyledNavItem = styled.div`
+export const StyledNavItem = styled(motion.div)`
     padding: 30px 0;
     display: flex;
     align-items: center;
@@ -28,18 +29,11 @@ export const StyledNavItem = styled.div`
         props.border ? "1px solid " + props.theme.colors.lightGrey : ""};
     width: ${(props) => (props.setWidth ? "140px" : "")};
 
-    &:hover {
-        .styledNavItem__icon {
-            transform: translateY(30px);
-        }
-    }
+
 
     .styledNavItem {
         &__icon {
             margin-left: 16px;
-            transform: translateY(0px);
-            transition: transform 0.3s ease-out;
-            will-change: transform;
         }
     }
 `
@@ -58,8 +52,8 @@ export const DropdownStyled = styled.div`
         props.type === "blue"
             ? props.theme.colors.darkBlue
             : props.type === "white"
-            ? props.theme.colors.white
-            : ""};
+                ? props.theme.colors.white
+                : ""};
     pointer-events: ${(props) => (props.active ? "" : "none")};
     z-index: 2;
     &.active {

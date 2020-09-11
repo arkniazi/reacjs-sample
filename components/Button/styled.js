@@ -6,6 +6,7 @@ export const StyledButton = styled(motion.button)`
         props.altTheme ? props.theme.colors.themeBlue : props.theme.colors.orange};
     display: flex;
     justify-content: center;
+    position: relative;
     border: none;
     cursor:pointer;
     align-items: center;

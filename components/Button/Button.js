@@ -3,6 +3,8 @@ import { StyledButton } from "./styled"
 
 
 export const Button = ({ className, btnText, altTheme, url, as, margin, size }) => {
+
+
     return (
         <StyledButton
             className={className}
@@ -10,7 +12,7 @@ export const Button = ({ className, btnText, altTheme, url, as, margin, size }) 
             margin={margin}
             size={size}
             whileHover={{
-                backgroundColor: "#ff8640",
+                backgroundColor: altTheme ? "#179AD3" : "#ff8640",
             }}
             transition={{
                 duration: 0.3
