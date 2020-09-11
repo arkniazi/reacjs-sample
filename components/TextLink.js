@@ -36,18 +36,18 @@ const StyledLinkWhite = styled(BaseLink)`
     color: white;
 `
 
-const TextLink = ({ url, as, color, text, size, weight, className }) => {
+const TextLink = ({ url, as, color, text, size, className }) => {
     const StyledLink =
         color === "blue"
             ? StyledLinkBlue
             : color === "white"
-            ? StyledLinkWhite
-            : StyledLinkBlack
+                ? StyledLinkWhite
+                : StyledLinkBlack
 
     return (
         <>
             <Link href={url} as={as} passHref>
-                <StyledLink size={size} weight={weight} className={className}>
+                <StyledLink size={size} className={className}>
                     {text}
                 </StyledLink>
             </Link>

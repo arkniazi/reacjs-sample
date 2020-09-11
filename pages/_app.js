@@ -1,6 +1,6 @@
 import App from "next/app"
 import { ApolloProvider } from "react-apollo"
-
+import { motion } from 'framer-motion';
 import withData from "../lib/withData"
 import Page from "../components/Page"
 
@@ -25,9 +25,19 @@ class MyApp extends App {
 
         return (
             // <ApolloProvider client={apollo}>
-            <Page>
-                <Component {...pageProps} />
-            </Page>
+            <motion.div initial="pageInitial" animate="pageAnimate" variants={{
+                pageInitial: {
+                    opacity: 0
+                },
+                pageAnimate: {
+                    opacity: 1
+                },
+            }}>
+                <Page>
+                    <Component {...pageProps} />
+                </Page>
+            </motion.div>
+
             // </ApolloProvider>
         )
     }
