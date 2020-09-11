@@ -2,11 +2,11 @@ import styled from "styled-components"
 
 export const StyledHeader = styled.div`
     background-color: transparent;
-    z-index:1;
+    z-index: 2;
     position: absolute;
     width: 100%;
-    border-bottom:1px solid ${(props) => props.theme.colors.lightGrey}; 
-    
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightGrey};
+
     .container {
         display: flex;
         align-items: center;

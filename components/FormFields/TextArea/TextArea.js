@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { TextAreaStyled, TextAreaContainer, WordCountStyled } from "./styled"
 import { Error } from "../Error"
 
-export const TextArea = ({ label, required, name, ...props }) => {
+export const TextArea = ({ label, required, name, color, ...props }) => {
     const [field, meta, helpers] = useField(name)
 
     const onChange = (e) => {
@@ -17,6 +17,7 @@ export const TextArea = ({ label, required, name, ...props }) => {
             className="textarea "
             value={field.value}
             onChange={onChange}
+            color={color}
             {...props}
         />
     )

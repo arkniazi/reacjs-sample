@@ -6,11 +6,10 @@ import _uniqueId from "lodash/uniqueId"
 
 import styled, { withTheme } from "styled-components"
 import { Error } from "../Error"
-import { customStyles } from "./styled"
+import { customStyles, customStylesInverse } from "./styled"
 
 const SelectContainerStyled = styled.div`
     width: ${(props) => (props.fullWidth ? "100%" : "initial")};
-    margin-bottom: 18px;
     &:nth-child(1) {
         margin-right: ${(props) => (props.fullWidth ? "9px" : "initial")};
     }
@@ -32,27 +31,35 @@ export const Select = ({
     value,
     className,
     error,
+    style,
     fullWidth,
+    submitOnChange,
     freeText,
     ...props
 }) => {
     //eslint-disable-next-line
     const [id] = useState(_uniqueId("unique-"))
     const [field, meta] = useField(name)
-    const { setFieldValue, setFieldTouched } = useFormikContext()
+    const { setFieldValue, setFieldTouched, submitForm } = useFormikContext()
 
     const handleOnChange = (option) => {
         setFieldValue(name, option ? option.value : "")
+        if (submitOnChange) {
+            submitForm()
+        }
     }
 
     if (!value && freeText) {
         value = { label: field.value, value: field.value }
     }
 
+    let customStyleObj = style === 'inverse' ? customStylesInverse : customStyles
+
+
     return (
         <SelectContainerStyled className={className} fullWidth={fullWidth}>
             <ReactSelect
-                styles={customStyles}
+                styles={customStyleObj}
                 name={name}
                 closeMenuOnSelect={true}
                 components={{ animatedComponents, IndicatorSeparator: () => null }}

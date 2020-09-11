@@ -1,7 +1,6 @@
 import styled from "styled-components"
 
 export const ColorColumnsStyled = styled.div`
-    border: 1px solid black;
     text-align: center;
     margin-bottom: 95px;
     .colorColumns {
@@ -16,7 +15,7 @@ export const ColorColumnsStyled = styled.div`
             align-items: center;
             justify-content: space-between;
             padding: 60px 66px;
-
+            border-radius: 2px;
             h5 {
                 margin-bottom: 35px;
             }

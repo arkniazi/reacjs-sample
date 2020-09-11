@@ -9,6 +9,7 @@ export const theme = {
         themeBlue: "#179AD3",
         darkBlue: "#005CB0",
         lightGrey: "rgba(255,255,255,0.4)",
+        borderGrey: "#ECEDEF"
     },
     font: {
         body: "'Montserrat', sans-serif",
@@ -24,7 +25,7 @@ export const theme = {
     },
     buttons: {
         paddingSmall: "15px 30px",
-        paddingMedium: "20px 55px",
+        paddingMedium: "20px 42px",
     },
     fontSizes: {
         desktop: {
@@ -149,5 +150,6 @@ export const theme = {
     },
     bs: {
         blue: "-15px 15px 45px rgba(0, 92, 176, 0.75);",
+        dark: "-15px 15px 43px rgba(84, 103, 121, 0.25);"
     },
 }

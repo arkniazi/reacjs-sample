@@ -10,7 +10,6 @@ import { Image } from "../Image"
 
 Router.onRouteChangeStart = () => {
     NProgress.start()
-    checkHeader
 }
 Router.onRouteChangeComplete = () => {
     NProgress.done()

@@ -1,10 +1,9 @@
-import { publicUrl } from "../../config"
 
-export const Image = ({ path, alt, className, width, height, api }) => {
+export const Image = ({ path, alt, className, width, height }) => {
     return (
         <img
             className={className}
-            src={api ? path : publicUrl + path}
+            src={path}
             alt={alt}
             height={height}
             width={width}

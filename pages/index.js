@@ -6,6 +6,7 @@ import { ContentSplit } from "../components/ContentSplit"
 import { CardRow } from "../components/CardRow"
 import { AdBanner } from "../components/AdBanner"
 import { InstagramBanner } from "../components/InstagramBanner"
+import { ProductsByCategory } from "../components/ProductsByCategory";
 
 const Home = (props) => {
     return (
@@ -14,6 +15,7 @@ const Home = (props) => {
             <HomePageTemplate>
                 <LinkList />
                 <ContentSplit />
+                <ProductsByCategory />
                 <CardRow />
                 <AdBanner />
                 <InstagramBanner />

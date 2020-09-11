@@ -29,6 +29,14 @@ export const Exit = ({ className, height, width, fill, onClick }) => {
     )
 }
 
+export const Minus = ({ className, height, width, fill }) => {
+    return (
+        <svg className={className} width={width || "14"} height={height || "3"} viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1.63477H15" stroke={fill || "black"} stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+    )
+}
+
 export const ChevronDown = ({ className, height, width, fill }) => {
     return (
         <svg
@@ -146,6 +154,55 @@ export const Search = ({ height, width, fill, className }) => {
                 fill={fill}
             />
         </svg>
+    )
+}
+
+export const GridIcon = ({ height, width, fill, opacity, onClick, className }) => {
+    return (
+        <svg width={width || '31'} height={height || '30'} viewBox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClick} className={className}>
+            <g opacity={opacity ? '1' : '0.4'}>
+                <rect x="16.7162" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="16.7162" y="16.5671" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="0.149048" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="16.5671" width="13.4328" height="13.4328" fill={fill || '#179AD3'} />
+            </g>
+        </svg>
+
+    )
+}
+
+export const HorizontalViewIcon = ({ height, width, fill, opacity, onClick, className }) => {
+    return (
+        <svg width={width || '34'} height={height || '30'} viewBox="0 0 34 30" fill="none" xmlns="http://www.w3.org/2000/svg" onClick={onClick} className={className}>
+            <g opacity={opacity ? '1' : '0.4'}>
+                <rect x="11.1186" y="2.03394" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+                <rect x="11.1186" y="13.2203" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="11.1865" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+                <rect x="11.1186" y="24.4067" width="22.8814" height="3.55932" fill={fill || '#179AD3'} />
+                <rect x="0.149048" y="22.3728" width="7.62712" height="7.62712" fill={fill || '#179AD3'} />
+            </g>
+        </svg>
+
+    )
+}
+
+
+export const FavouriteProductIcon = ({ height, width, fill, onClick, className }) => {
+    return (
+        <svg width={width || '24'} height={height || '22'} className={className} onClick={onClick} viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.84 3.61012C20.3292 3.09912 19.7228 2.69376 19.0554 2.4172C18.3879 2.14064 17.6725 1.99829 16.95 1.99829C16.2275 1.99829 15.5121 2.14064 14.8446 2.4172C14.1772 2.69376 13.5708 3.09912 13.06 3.61012L12 4.67012L10.94 3.61012C9.90831 2.57842 8.50903 1.99883 7.05 1.99883C5.59097 1.99883 4.19169 2.57842 3.16 3.61012C2.12831 4.64181 1.54871 6.04108 1.54871 7.50012C1.54871 8.95915 2.12831 10.3584 3.16 11.3901L4.22 12.4501L12 20.2301L19.78 12.4501L20.84 11.3901C21.351 10.8794 21.7564 10.2729 22.0329 9.60547C22.3095 8.93801 22.4518 8.2226 22.4518 7.50012C22.4518 6.77763 22.3095 6.06222 22.0329 5.39476C21.7564 4.7273 21.351 4.12087 20.84 3.61012Z" fill="white" stroke={fill || "#F37126"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+
+    )
+}
+
+export const PhoneIcon = ({ height, width, fill, onClick, className }) => {
+    return (
+        <svg width={width || '22'} height={height || '22'} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
+            <path d="M21.0001 15.964V18.964C21.0012 19.2425 20.9441 19.5182 20.8326 19.7734C20.721 20.0286 20.5574 20.2576 20.3521 20.4459C20.1469 20.6342 19.9046 20.7775 19.6408 20.8667C19.377 20.956 19.0974 20.9891 18.8201 20.964C15.7429 20.6297 12.7871 19.5782 10.1901 17.894C7.77388 16.3587 5.72539 14.3102 4.19006 11.894C2.50003 9.28525 1.4483 6.31504 1.12006 3.22404C1.09507 2.94751 1.12793 2.6688 1.21656 2.40567C1.30518 2.14253 1.44763 1.90073 1.63482 1.69566C1.82202 1.4906 2.04986 1.32675 2.30385 1.21456C2.55783 1.10238 2.8324 1.0443 3.11006 1.04404H6.11006C6.59536 1.03927 7.06585 1.21112 7.43382 1.52757C7.80179 1.84403 8.04213 2.28349 8.11005 2.76404C8.23668 3.72411 8.47151 4.66677 8.81006 5.57404C8.9446 5.93197 8.97372 6.32096 8.89396 6.69492C8.81421 7.06889 8.62892 7.41215 8.36005 7.68404L7.09006 8.95404C8.51361 11.4576 10.5865 13.5305 13.0901 14.954L14.3601 13.684C14.6319 13.4152 14.9752 13.2299 15.3492 13.1501C15.7231 13.0704 16.1121 13.0995 16.4701 13.234C17.3773 13.5726 18.32 13.8074 19.2801 13.934C19.7658 14.0026 20.2095 14.2472 20.5266 14.6215C20.8437 14.9958 21.0122 15.4736 21.0001 15.964Z" stroke={fill || '#F37126'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
     )
 }
 
