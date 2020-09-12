@@ -1,4 +1,4 @@
-import ContactPageTemplate from "../templates/ContactPageTemplate"
+
 import { InnerPageBanner } from "../components/InnerPageBanner"
 import { FormLayout } from "../components/InnerPageBanner/FormLayout"
 const Contact = () => {
@@ -7,7 +7,6 @@ const Contact = () => {
             <InnerPageBanner>
                 <FormLayout />
             </InnerPageBanner>
-            <ContactPageTemplate></ContactPageTemplate>
         </>
     )
 }

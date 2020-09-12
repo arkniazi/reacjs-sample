@@ -10,10 +10,11 @@ export const TextInputStyles = css`
             : props.theme.fontSizes.desktop.link.size};
     font-family: ${(props) =>
         props.altStyle ? props.theme.font.heading : props.theme.font.body};
-    padding: 1rem;
+    padding: 13px 1rem;
     width: 100%;
     transition: ${(props) => props.theme.transitions.default};
     color: ${(props) => (props.color ? props.color : props.theme.colors.white)};
+
     ::-webkit-input-placeholder {
         color: ${(props) => (props.color ? props.color : props.theme.colors.white)};
         opacity: 1;
@@ -29,7 +30,7 @@ export const TextInputStyles = css`
     &:focus,
     &:hover {
         outline: none;
-        border-color: ${(props) => props.theme.colors.lightGrey};
+        border-color: ${(props) => props.theme.colors.borderGrey};
     }
 `
 

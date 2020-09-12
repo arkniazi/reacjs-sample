@@ -1,4 +1,4 @@
-import AboutPageTemplate from "../templates/AboutPageTemplate"
+import StandardPageTemplate from "../templates/StandardPageTemplate"
 import { InnerPageBanner } from "../components/InnerPageBanner"
 import { ContentColumns } from "../components/ContentColumns"
 import { CardRow } from "../components/CardRow"
@@ -11,11 +11,11 @@ const About = (props) => {
                 <ColumnLayout />
             </InnerPageBanner>
 
-            <AboutPageTemplate>
+            <StandardPageTemplate>
                 <ContentColumns />
                 <CardRow />
                 <AdBanner />
-            </AboutPageTemplate>
+            </StandardPageTemplate>
         </>
     )
 }

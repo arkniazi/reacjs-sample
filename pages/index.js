@@ -1,4 +1,4 @@
-import HomePageTemplate from "../templates/HomePageTemplate"
+import StandardPageTemplate from "../templates/StandardPageTemplate"
 // import { ItemListing } from "../components/ItemListing"
 import { Banner } from "../components/Banner"
 import { LinkList } from "../components/LinkList"
@@ -12,14 +12,14 @@ const Home = (props) => {
     return (
         <>
             <Banner />
-            <HomePageTemplate>
+            <StandardPageTemplate>
                 <LinkList />
                 <ContentSplit />
                 <ProductsByCategory />
                 <CardRow />
                 <AdBanner />
                 <InstagramBanner />
-            </HomePageTemplate>
+            </StandardPageTemplate>
         </>
     )
 }

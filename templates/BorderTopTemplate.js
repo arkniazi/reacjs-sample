@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import styled from "styled-components"
 
-const StyledSingleItemPageTemplate = styled.div`
+const StyledBorderTopPageTemplate = styled.div`
     margin: 0;
     padding: 0;
     border-top: ${(props) => props.theme.sizes.headerHeight} solid
@@ -9,12 +9,12 @@ const StyledSingleItemPageTemplate = styled.div`
     padding-top: 63px;
 `
 
-export default class SingleItemPageTemplate extends Component {
+export default class BorderTopPageTemplate extends Component {
     render() {
         return (
-            <StyledSingleItemPageTemplate>
+            <StyledBorderTopPageTemplate>
                 {this.props.children}
-            </StyledSingleItemPageTemplate>
+            </StyledBorderTopPageTemplate>
         )
     }
 }

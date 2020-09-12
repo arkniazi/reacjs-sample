@@ -1,30 +1,28 @@
 import TextLink from "../TextLink"
-import { StyledButton } from "./styled"
+import { StyledBorderButton } from "./styled"
 
 
-export const Button = ({ className, btnText, altTheme, fullWidth, url, as, margin, size }) => {
+export const BorderButton = ({ className, btnText, url, as, margin, size }) => {
 
 
     return (
-        <StyledButton
+        <StyledBorderButton
             className={className}
-            altTheme={altTheme}
             margin={margin}
             size={size}
-            fullWidth={fullWidth}
             whileHover={{
-                backgroundColor: altTheme ? "#4aabd6" : "#ff8640",
+                backgroundColor: "#4aabd6"
             }}
             transition={{
                 duration: 0.3
             }}
         >
             <TextLink
-                color={altTheme ? "white" : "black"}
+                color="black"
                 text={btnText}
                 url={url}
                 as={as}
             />
-        </StyledButton>
+        </StyledBorderButton>
     )
 }

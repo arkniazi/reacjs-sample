@@ -24,7 +24,7 @@ export const theme = {
         xl: "100px",
     },
     buttons: {
-        paddingSmall: "15px 30px",
+        paddingSmall: "10px 30px",
         paddingMedium: "20px 42px",
     },
     fontSizes: {

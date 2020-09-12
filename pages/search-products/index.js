@@ -7,7 +7,7 @@ import { AdBanner } from "../../components/AdBanner"
 import { Filter } from "../../components/Filter"
 import { ProductGrid } from "../../components/ProductGrid"
 import { KeywordSearchForm } from '../../components/Forms/KeywordSearchForm'
-import SearchPageTemplate from "../../templates/SearchPageTemplate"
+import BorderTopTemplate from "../../templates/BorderTopTemplate"
 import styled from "styled-components"
 
 import { searchResults } from './demodata';
@@ -30,7 +30,7 @@ const SearchPage = ({ category, subcategory }) => {
 
     return (
         <>
-            <SearchPageTemplate>
+            <BorderTopTemplate>
                 <ComponentContainer>
                     <FlexContainer>
                         <Filter category={category} subcategory={subcategory} />
@@ -45,7 +45,7 @@ const SearchPage = ({ category, subcategory }) => {
                     </FlexContainer>
                     <AdBanner margin="90px 0 0 0" />
                 </ComponentContainer>
-            </SearchPageTemplate>
+            </BorderTopTemplate>
         </>
     )
 }

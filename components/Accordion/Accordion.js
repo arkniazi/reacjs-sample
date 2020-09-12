@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from "styled-components"
+import { AnimatePresence, motion } from 'framer-motion'
 import { Minus } from "../Icons";
 import { FlexContainer } from "../styles/Page"
 
@@ -40,41 +41,27 @@ const PlusIconStyled = styled.div`
 
 
 export const AccordionComponent = ({ label, name, heading, children }) => {
-
+    const [isToggled, setToggled] = useState(false)
     return (
-        <AccordionStyled allowZeroExpanded>
-            <>
-
-                <AccordionItem>
-
-                    <AccordionItemHeading>
-                        <AccordionButtonStyled onClick={(prevState) => setIsOpen(!prevState)}>
-
-                            <div style={{ position: 'relative' }}>
-                                {label ? (
-                                    <label className="label" htmlFor={name ? name : label}>{label}</label>
-                                ) : heading ? (
-                                    <h4 className="label">{heading}</h4>
-                                ) : ''}
-
-                                <AccordionItemState>
-                                    {({ expanded }) => (expanded
-                                        ? <PlusIconStyled>-</PlusIconStyled>
-                                        : <PlusIconStyled>+</PlusIconStyled>
-                                    )}
-                                </AccordionItemState>
-                            </div>
-
-
-                        </AccordionButtonStyled>
-                    </AccordionItemHeading>
-
-                    <AccordionItemPanel>
+        <article >
+            {label ? (
+                <label className="label" htmlFor={name ? name : label} onClick={() => setToggled(prevState => !prevState)}>{label}</label>
+            ) : heading ? (
+                <h4 className="label" onClick={() => setToggled(prevState => !prevState)}>{heading}</h4>
+            ) : ''}
+            <AnimatePresence>
+                {isToggled && (
+                    <motion.div
+                        style={{ overflow: 'hidden' }}
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                    >
                         {children}
-                    </AccordionItemPanel>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        </article>
 
-                </AccordionItem>
-            </>
-        </AccordionStyled>
     )
 }

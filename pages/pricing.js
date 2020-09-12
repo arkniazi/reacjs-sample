@@ -1,18 +1,18 @@
-import PricingPageTemplate from "../templates/PricingPageTemplate"
+import StandardPageTemplate from "../templates/StandardPageTemplate"
 import { InnerPageBanner } from "../components/InnerPageBanner"
 import { ColorColumns } from "../components/ColorColumns"
 import { TextLayout } from "../components/InnerPageBanner/TextLayout"
-const Contact = () => {
+const Pricing = () => {
     return (
         <>
             <InnerPageBanner>
                 <TextLayout title="Pricing Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
             </InnerPageBanner>
-            <PricingPageTemplate>
+            <StandardPageTemplate>
                 <ColorColumns />
-            </PricingPageTemplate>
+            </StandardPageTemplate>
         </>
     )
 }
 
-export default Contact
+export default Pricing
