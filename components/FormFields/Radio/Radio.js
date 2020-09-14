@@ -16,6 +16,19 @@ const LabelStyled = styled.label`
     cursor: pointer;
     p {
         position: relative;
+
+        &:after{
+            content:'';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            width: 100%;
+            background: ${(props) => (props.theme.colors.orange)};
+            transform: translateY(0px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.25s ease;
+        }
     }
 `
 const RadioStyled = styled.input`
@@ -24,6 +37,11 @@ const RadioStyled = styled.input`
     &:checked + p:after {
         transform: translateY(4px);
         opacity: 1;
+    }
+
+    &:hover + p:after{
+        transform: translateY(4px);
+        opacity: 0.4;
     }
 `
 

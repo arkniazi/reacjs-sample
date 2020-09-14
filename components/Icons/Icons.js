@@ -77,6 +77,15 @@ export const ChevronLeft = ({ className, height, width, fill }) => {
     )
 }
 
+export const BackChevronLeft = ({ className, height, width, fill }) => {
+    return (
+        <svg className={className} width={width || "9"} height={height || "15"} viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 1.5L2 7.75L8 14" stroke={fill || "#179AD3"} strokeWidth="2" />
+        </svg>
+
+    )
+}
+
 export const Instagram = ({ height, width, fill, className }) => {
     return (
         <svg
@@ -200,9 +209,39 @@ export const FavouriteProductIcon = ({ height, width, fill, onClick, className }
 export const PhoneIcon = ({ height, width, fill, onClick, className }) => {
     return (
         <svg width={width || '22'} height={height || '22'} viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
-            <path d="M21.0001 15.964V18.964C21.0012 19.2425 20.9441 19.5182 20.8326 19.7734C20.721 20.0286 20.5574 20.2576 20.3521 20.4459C20.1469 20.6342 19.9046 20.7775 19.6408 20.8667C19.377 20.956 19.0974 20.9891 18.8201 20.964C15.7429 20.6297 12.7871 19.5782 10.1901 17.894C7.77388 16.3587 5.72539 14.3102 4.19006 11.894C2.50003 9.28525 1.4483 6.31504 1.12006 3.22404C1.09507 2.94751 1.12793 2.6688 1.21656 2.40567C1.30518 2.14253 1.44763 1.90073 1.63482 1.69566C1.82202 1.4906 2.04986 1.32675 2.30385 1.21456C2.55783 1.10238 2.8324 1.0443 3.11006 1.04404H6.11006C6.59536 1.03927 7.06585 1.21112 7.43382 1.52757C7.80179 1.84403 8.04213 2.28349 8.11005 2.76404C8.23668 3.72411 8.47151 4.66677 8.81006 5.57404C8.9446 5.93197 8.97372 6.32096 8.89396 6.69492C8.81421 7.06889 8.62892 7.41215 8.36005 7.68404L7.09006 8.95404C8.51361 11.4576 10.5865 13.5305 13.0901 14.954L14.3601 13.684C14.6319 13.4152 14.9752 13.2299 15.3492 13.1501C15.7231 13.0704 16.1121 13.0995 16.4701 13.234C17.3773 13.5726 18.32 13.8074 19.2801 13.934C19.7658 14.0026 20.2095 14.2472 20.5266 14.6215C20.8437 14.9958 21.0122 15.4736 21.0001 15.964Z" stroke={fill || '#F37126'} stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M21.0001 15.964V18.964C21.0012 19.2425 20.9441 19.5182 20.8326 19.7734C20.721 20.0286 20.5574 20.2576 20.3521 20.4459C20.1469 20.6342 19.9046 20.7775 19.6408 20.8667C19.377 20.956 19.0974 20.9891 18.8201 20.964C15.7429 20.6297 12.7871 19.5782 10.1901 17.894C7.77388 16.3587 5.72539 14.3102 4.19006 11.894C2.50003 9.28525 1.4483 6.31504 1.12006 3.22404C1.09507 2.94751 1.12793 2.6688 1.21656 2.40567C1.30518 2.14253 1.44763 1.90073 1.63482 1.69566C1.82202 1.4906 2.04986 1.32675 2.30385 1.21456C2.55783 1.10238 2.8324 1.0443 3.11006 1.04404H6.11006C6.59536 1.03927 7.06585 1.21112 7.43382 1.52757C7.80179 1.84403 8.04213 2.28349 8.11005 2.76404C8.23668 3.72411 8.47151 4.66677 8.81006 5.57404C8.9446 5.93197 8.97372 6.32096 8.89396 6.69492C8.81421 7.06889 8.62892 7.41215 8.36005 7.68404L7.09006 8.95404C8.51361 11.4576 10.5865 13.5305 13.0901 14.954L14.3601 13.684C14.6319 13.4152 14.9752 13.2299 15.3492 13.1501C15.7231 13.0704 16.1121 13.0995 16.4701 13.234C17.3773 13.5726 18.32 13.8074 19.2801 13.934C19.7658 14.0026 20.2095 14.2472 20.5266 14.6215C20.8437 14.9958 21.0122 15.4736 21.0001 15.964Z" stroke={fill || '#F37126'} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
 
+    )
+}
+
+export const MapPin = ({ height, width, fill, onClick, className }) => {
+    return (
+        <svg className={className} width={width || "15"} height={height || "15"} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.125 6.25C13.125 10.625 7.5 14.375 7.5 14.375C7.5 14.375 1.875 10.625 1.875 6.25C1.875 4.75816 2.46763 3.32742 3.52252 2.27252C4.57742 1.21763 6.00816 0.625 7.5 0.625C8.99184 0.625 10.4226 1.21763 11.4775 2.27252C12.5324 3.32742 13.125 4.75816 13.125 6.25Z" stroke={fill || "black"} strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7.5 8.125C8.53553 8.125 9.375 7.28553 9.375 6.25C9.375 5.21447 8.53553 4.375 7.5 4.375C6.46447 4.375 5.625 5.21447 5.625 6.25C5.625 7.28553 6.46447 8.125 7.5 8.125Z" fill="white" stroke={fill || "black"} strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+
+    )
+}
+
+export const Star = ({ height, width, fill, onClick, className }) => {
+    return (
+        <svg onClick={onClick} className={className} width={width || "18"} height={height || "17"} viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 1.5L11.3175 6.195L16.5 6.9525L12.75 10.605L13.635 15.765L9 13.3275L4.365 15.765L5.25 10.605L1.5 6.9525L6.6825 6.195L9 1.5Z" stroke={fill || "#F37126"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+
+    )
+}
+
+
+export const Archive = ({ height, width, fill, onClick, className }) => {
+    return (
+        <svg onClick={onClick} className={className} width={width || "18"} height={height || "18"} viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.75 6V15.75H2.25V6" stroke={fill || "#F37126"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M17.25 2.25H0.75V6H17.25V2.25Z" stroke={fill || "#F37126"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M7.5 9H10.5" stroke={fill || "#F37126"} strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
     )
 }
 

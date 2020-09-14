@@ -1,6 +1,7 @@
 import styled from "styled-components"
+import { AnimatePresence, motion } from 'framer-motion'
 
-const tease = styled.div`
+const tease = styled(motion.div)`
     .gridViewStyled{
         font-family: ${(props) => props.theme.font.heading};
         font-weight: bold;

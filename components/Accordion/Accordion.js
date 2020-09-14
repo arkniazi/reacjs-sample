@@ -4,46 +4,24 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { Minus } from "../Icons";
 import { FlexContainer } from "../styles/Page"
 
-import {
-    Accordion,
-    AccordionItem,
-    AccordionItemHeading,
-    AccordionItemState,
-    AccordionItemButton,
-    AccordionItemPanel,
-} from 'react-accessible-accordion';
-
-const AccordionStyled = styled(Accordion)`
-    margin-bottom: 30px;
-`
-
-const AccordionButtonStyled = styled(AccordionItemButton)`
-    padding-bottom: 20px;
-    cursor: pointer;
-    &:focus{
-        outline: none;
+const variants = {
+    open: {
+        opacity: 1, height: 'auto'
+    },
+    close: {
+        opacity: 0, height: 0
     }
+}
 
-    label{
-        cursor: pointer;
-    }
-`
-
-const PlusIconStyled = styled.div`
-    font-size: 28px;
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: -8px;
-    font-weight: bold;
-    
+const ArticleStyled = styled.article`
+    padding: 20px 0;
 `
 
 
 export const AccordionComponent = ({ label, name, heading, children }) => {
     const [isToggled, setToggled] = useState(false)
     return (
-        <article >
+        <ArticleStyled>
             {label ? (
                 <label className="label" htmlFor={name ? name : label} onClick={() => setToggled(prevState => !prevState)}>{label}</label>
             ) : heading ? (
@@ -52,16 +30,17 @@ export const AccordionComponent = ({ label, name, heading, children }) => {
             <AnimatePresence>
                 {isToggled && (
                     <motion.div
+                        variants={variants}
                         style={{ overflow: 'hidden' }}
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
+                        initial="close"
+                        animate="open"
+                        exit="close"
                     >
                         {children}
                     </motion.div>
                 )}
             </AnimatePresence>
-        </article>
+        </ArticleStyled>
 
     )
 }

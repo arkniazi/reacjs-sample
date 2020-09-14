@@ -4,7 +4,20 @@ import { HorizontalTeaseStyled } from './styled'
 import { FavouriteProductIcon } from '../Icons'
 
 
-export const HorizontalTease = ({ result: { imagePath, price, title, description, volume, metricLength } }) => {
+export const HorizontalTease = ({
+    variants,
+    initial,
+    animate,
+    exit,
+    result: {
+        imagePath,
+        price,
+        title,
+        description,
+        volume,
+        metricLength } }) => {
+
+
     const [favourite, setFavourite] = useState(false) //default set by data, hardcoded for now
 
     const handleSetFavourite = () => {
@@ -12,7 +25,13 @@ export const HorizontalTease = ({ result: { imagePath, price, title, description
     }
 
     return (
-        <HorizontalTeaseStyled>
+        <HorizontalTeaseStyled
+            variants={variants}
+            initial={initial}
+            animate={animate}
+            exit={exit}
+            whileHover={{ scale: 1.05 }}
+        >
             <div className="gridViewStyled">
                 <div className="gridViewStyled__imageWrap">
                     <FavouriteProductIcon

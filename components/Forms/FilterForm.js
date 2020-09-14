@@ -161,7 +161,7 @@ export const FilterForm = () => {
                             </AccordionComponent>
 
                             <AccordionComponent label="condition">
-                                <InputFlexSection direction="column">
+                                <InputFlexSection direction="column" noLabel>
                                     <Checkbox
                                         label="New"
                                         name="condition"
@@ -181,7 +181,7 @@ export const FilterForm = () => {
                             </AccordionComponent>
 
                             <AccordionComponent label="seller type">
-                                <InputFlexSection direction="column">
+                                <InputFlexSection direction="column" noLabel>
                                     <Checkbox
                                         label="Private"
                                         name="sellerType"

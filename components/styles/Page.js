@@ -15,6 +15,7 @@ export const FlexContainer = styled.div`
     display: flex;
     flex-direction: ${(props) => (props.dir === "column" ? "column" : "row")};
     align-items: ${(props) => props.align};
+    justify-content: ${(props) => props.justify}
 `
 export const ComponentContainer = styled.div`
     max-width: ${(props) => props.theme.sizes.maxWidth};

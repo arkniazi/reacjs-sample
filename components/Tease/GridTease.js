@@ -4,15 +4,38 @@ import { FavouriteProductIcon } from '../Icons'
 import { GridTeaseStyled } from "./styled"
 import TextLink from "../TextLink"
 
-export const GridTease = ({ result: { imagePath, price, title, description, id, volume, metricLength } }) => {
+
+
+export const GridTease = ({
+    variants,
+    initial,
+    animate,
+    exit,
+    result: {
+        imagePath,
+        price,
+        title,
+        description,
+        id,
+        volume,
+        metricLength
+    } }) => {
+
     const [favourite, setFavourite] = useState(false) //default set by data, hardcoded for now
 
     const handleSetFavourite = () => {
         setFavourite(!favourite)
     }
 
+
     return (
-        <GridTeaseStyled>
+        <GridTeaseStyled
+            variants={variants}
+            initial={initial}
+            animate={animate}
+            exit={exit}
+            whileHover={{ scale: 1.05 }}
+        >
             <div className="gridViewStyled">
                 <div className="gridViewStyled__imageWrap">
                     <FavouriteProductIcon

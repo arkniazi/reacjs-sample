@@ -25,7 +25,7 @@ const Login = ({ id }) => {
 
                 <Button
                     btnText="Create Account"
-                    url="/register"
+                    url="/signup"
                     size="small"
                     fullWidth
                     altTheme
