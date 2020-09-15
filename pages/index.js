@@ -1,5 +1,4 @@
 import StandardPageTemplate from "../templates/StandardPageTemplate"
-// import { ItemListing } from "../components/ItemListing"
 import { Banner } from "../components/Banner"
 import { LinkList } from "../components/LinkList"
 import { ContentSplit } from "../components/ContentSplit"

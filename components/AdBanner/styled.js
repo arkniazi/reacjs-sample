@@ -8,7 +8,18 @@ export const AdBannerStyled = styled.div`
         padding: 0;
     }
 
+    .img-column{
+        width: 100%;
+        display: none;
+        ${(props) => props.theme.mediaQueries.lg} {
+            width: unset;
+            display: block;
+        }
+    }
+
     .adBannerStyled {
+        position: relative;
+     
         &__flex-container{
             display: flex;
             flex-direction: column;
@@ -17,29 +28,48 @@ export const AdBannerStyled = styled.div`
                 flex-direction: row;
             }
         }
+
+      
         &__column {
-            flex: 1 0 0;
-            overflow: hidden;
-            min-height: 415px;
+            
+            position: relative;
             ${(props) => props.theme.mediaQueries.lg} {
                 flex-direction: row;
+                overflow: hidden;
+                min-height: 415px;
+                flex: 1 0 0;
             }
             &.content {
-                padding: 80px 0;
+                padding: 40px 0;
+                
+                ${(props) => props.theme.mediaQueries.lg} {
+                    padding: 80px 0;
+                }
+                
                 h2 {
-                    max-width: 75%;
+                    max-width: 90%;
+                   
+                    ${(props) => props.theme.mediaQueries.lg} {
+                        max-width: 75%;
+                    }
                 }
             }
         }
+        
         &__decoration {
             margin-top: 40px;
         }
 
         &__poster {
             height: 103%;
-            position: relative;
-            top: -7px;
-            left: 20%;
+            top: 5px;
+            left: 27%;
+            opacity: 0.8;
+            /* display:none; */
+            ${(props) => props.theme.mediaQueries.lg} {
+                top: -7px;
+                left: 20%;
+            }
         }
     }
 `

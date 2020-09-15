@@ -17,12 +17,12 @@ export const ContentSplit = () => {
                             alt="surfing the barrel"
                         />
                         <div className="contentSplit__label-container">
-                            <FlexContainer dir="row" align="center">
+                            <div className="flex-container">
                                 <Instagram height="20" width="20" />
                                 <p className="label contentSplit__label">
                                     @cody_batess
                                 </p>
-                            </FlexContainer>
+                            </div>
                         </div>
                     </div>
                     <div className="contentSplit__split">

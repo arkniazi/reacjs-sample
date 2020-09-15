@@ -1,13 +1,14 @@
 import styled from "styled-components"
 import { useState } from 'react'
 
-import { Messages } from './Messages'
-import { Favourites } from './Favourites'
-import { Selling } from './Selling'
+import { Messages } from './Messages/Messages'
+import { Favourites } from './Favourites/Favourites'
+import { Selling } from './Selling/Selling'
 
 import { UnderlineButton } from '../Button'
 import { FlexContainer } from '../styles/Page'
 
+import { demoMessageList } from './DemoData'
 
 const UserHubStyled = styled.div`
 
@@ -20,7 +21,7 @@ export const UserHub = () => {
 
         switch (view) {
             case 'messages':
-                return <Messages />
+                return <Messages demoMessageList={demoMessageList} />
                 break;
             case 'favourites':
                 return <Favourites />

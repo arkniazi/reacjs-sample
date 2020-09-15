@@ -1,4 +1,5 @@
 import { useState } from "react"
+import styled from 'styled-components';
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import * as Yup from "yup"
 import { FlexContainer } from "../styles/Page"
@@ -17,6 +18,27 @@ import {
     sellerTypeOptions,
 } from "./SearchFormOptions"
 
+
+const SearchFormStyled = styled.div`
+    margin-top: 50px;
+
+    ${(props) => props.theme.mediaQueries.lg} {
+        margin-top: 0;
+    }
+    .searchForm__select{
+        &:first-child{
+            margin-bottom: 15px;
+            ${(props) => props.theme.mediaQueries.lg} {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .searchForm__category{
+        margin-bottom: 30px;
+    }
+`
+
 export const SearchForm = () => {
     const InitialValues = {
         category: "surf",
@@ -34,7 +56,7 @@ export const SearchForm = () => {
     })
 
     return (
-        <div>
+        <SearchFormStyled>
             <Formik
                 initialValues={InitialValues}
                 validationSchema={validationSchema}
@@ -48,7 +70,7 @@ export const SearchForm = () => {
             >
                 {({ isSubmitting }) => (
                     <Form>
-                        <FormInputWrapper margin="0 0 30px 0">
+                        <FormInputWrapper margin="0 0 30px 0" className="searchForm__category">
                             <InputFlexSection justify="space-between">
                                 <Radio
                                     label="Surf"
@@ -77,6 +99,7 @@ export const SearchForm = () => {
 
                         <FormInputWrapper margin="0 0 20px 0">
                             <FlexContainer>
+
                                 <Select
                                     options={radiusOptions}
                                     name="radius"
@@ -84,32 +107,40 @@ export const SearchForm = () => {
                                     fullWidth
                                     placeholder="Radius"
                                     defaultValue="Radius"
+                                    className="searchForm__select"
                                 />
+
                                 <Select
                                     options={conditionOptions}
                                     name="condition"
                                     label="Condition"
                                     placeholder="Condition"
                                     fullWidth
+                                    className="searchForm__select"
                                 />
+
                             </FlexContainer>
                         </FormInputWrapper>
 
                         <FormInputWrapper margin="0 0 20px 0">
                             <FlexContainer>
+
                                 <Select
                                     options={minPriceOptions}
                                     name="minPrice"
                                     label="Min Price"
                                     placeholder="Min Price"
                                     fullWidth
+                                    className="searchForm__select"
                                 />
+
                                 <Select
                                     options={maxPriceOptions}
                                     name="maxPrice"
                                     label="Max Price"
                                     placeholder="Max Price"
                                     fullWidth
+                                    className="searchForm__select"
                                 />
                             </FlexContainer>
                         </FormInputWrapper>
@@ -146,6 +177,6 @@ export const SearchForm = () => {
                     </Form>
                 )}
             </Formik>
-        </div>
+        </SearchFormStyled>
     )
 }

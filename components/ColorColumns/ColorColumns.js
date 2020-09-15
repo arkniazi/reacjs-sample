@@ -1,13 +1,12 @@
 import { ComponentContainer } from "../styles/Page"
-import { FlexContainer } from "../styles/Page"
-import { ColorColumnsStyled } from "./styled"
+import { ColorColumnsStyled, ColorColumnsFlex } from "./styled"
 import { Button } from "../Button"
 // className, btnText, url, margin, size
 export const ColorColumns = () => {
     return (
         <ColorColumnsStyled>
             <ComponentContainer>
-                <FlexContainer>
+                <ColorColumnsFlex>
                     <div className="colorColumns__column">
                         <h5 className="black">Individual</h5>
                         <p className="lead">
@@ -38,7 +37,7 @@ export const ColorColumns = () => {
                         </p>
                         <Button btnText="Enquire" url="/" altTheme />
                     </div>
-                </FlexContainer>
+                </ColorColumnsFlex>
             </ComponentContainer>
         </ColorColumnsStyled>
     )

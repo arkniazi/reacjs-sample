@@ -10,12 +10,17 @@ import { customStyles, customStylesInverse } from "./styled"
 
 const SelectContainerStyled = styled.div`
     width: ${(props) => (props.fullWidth ? "100%" : "initial")};
+    cursor: pointer;
     &:nth-child(1) {
-        margin-right: ${(props) => (props.fullWidth ? "9px" : "initial")};
+        ${(props) => props.theme.mediaQueries.lg} {
+            margin-right: ${(props) => (props.fullWidth ? "9px" : "initial")};
+        }
     }
 
     &:nth-child(2) {
-        margin-left: ${(props) => (props.fullWidth ? "9px" : "initial")};
+        ${(props) => props.theme.mediaQueries.lg} {
+            margin-left: ${(props) => (props.fullWidth ? "9px" : "initial")};
+        }
     }
 `
 

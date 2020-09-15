@@ -59,6 +59,14 @@ const tease = styled(motion.div)`
 
 export const GridTeaseStyled = styled(tease)`
       margin: 0 12.5px 55px 12.5px;
+      max-width: calc(50% - 25px);
+
+      img{
+          max-width: 100%;
+      }
+    ${(props) => props.theme.mediaQueries.lg} {
+        max-width: unset;
+    }
 `
 
 

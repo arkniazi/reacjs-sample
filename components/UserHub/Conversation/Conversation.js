@@ -1,11 +1,10 @@
-import { demoMessageList } from './DemoData'
-import { ConversationStyled } from './styled'
+import { ConversationStyled } from '../styled'
 
 import { ConversationTitleBar } from './ConversationTitleBar'
+import { ConversationHistory } from './ConversationHistory'
+import { MessageBuyerForm } from '../../Forms/MessageBuyerForm'
 
-
-
-export const Conversation = ({ conversationID, setView, ContainerVariants, initial, animate, exit }) => {
+export const Conversation = ({ conversationID, setView, ContainerVariants, initial, animate, demoMessageList, exit }) => {
 
     const MessageListItem = demoMessageList[conversationID - 1];
 
@@ -19,14 +18,14 @@ export const Conversation = ({ conversationID, setView, ContainerVariants, initi
 
             <ConversationTitleBar setView={setView} MessageListItem={MessageListItem} />
 
-            <div>
-                <h2 className="black">CONVERSTATION HERE</h2>
-            </div>
+
+            <ConversationHistory MessageListItem={MessageListItem} />
 
 
-            <div>
-                <p>send Message Form here</p>
+            <div style={{ margin: '30px 0 0 0' }}>
+                <MessageBuyerForm />
             </div>
+
 
 
         </ConversationStyled>

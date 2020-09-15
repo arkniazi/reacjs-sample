@@ -1,11 +1,12 @@
-import { FlexContainer } from '../styles/Page';
+import { FlexContainer } from '../../styles/Page';
 
 import { motion } from 'framer-motion'
-import { demoMessageList } from './DemoData'
+
 import { MessageListTease } from './MessageListTease'
 
 export const MessageList = ({
     variants,
+    demoMessageList,
     MessageListTeaseVariants,
     ContainerVariants,
     initial,

@@ -15,19 +15,35 @@ export const InstagramBannerStyled = styled.div`
     .instagramBanner {
         &__content {
             color: ${(props) => props.theme.colors.white};
-            padding-left: 100px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            align-items: center;
+            ${(props) => props.theme.mediaQueries.lg} {
+                margin-top: 0;
+                padding-left: 100px;
+                align-items: flex-start;
+            }
         }
         &__image {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             box-shadow: ${(props) => props.theme.bs.blue};
-            &:nth-child(5),
-            &:nth-child(6),
-            &:nth-child(7),
-            &:nth-child(8) {
-                margin-bottom: 0;
+            height: 160px;
+            width: 160px;
+      
+
+            ${(props) => props.theme.mediaQueries.lg} {
+                height: 175px;
+                width: 175px;
+                margin-bottom: 30px;
+
+                &:nth-child(5),
+                &:nth-child(6),
+                &:nth-child(7),
+                &:nth-child(8) {
+                    margin-bottom: 0;
+                }
             }
         }
 
@@ -37,13 +53,19 @@ export const InstagramBannerStyled = styled.div`
     }
 
     h2 {
-        padding-left: 10px;
+        ${(props) => props.theme.mediaQueries.lg} {
+            padding-left: 10px;
+        }
     }
 `
 
 export const ImageGrid = styled.div`
     display: flex;
     flex-wrap: wrap;
-    max-width: 66%;
+    
     justify-content: space-between;
+
+    ${(props) => props.theme.mediaQueries.lg} {
+        max-width: 66%;
+    }
 `
