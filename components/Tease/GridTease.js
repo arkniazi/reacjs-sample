@@ -42,7 +42,7 @@ export const GridTease = ({
                         className={favourite ? 'gridViewStyled__favouriteIcon active' : 'gridViewStyled__favouriteIcon'}
                         onClick={handleSetFavourite}
                     />
-                    <Image path={imagePath} />
+                    <img src={imagePath} alt="product_thumb" />
                     <p className="gridViewStyled__priceTag">{price}</p>
                 </div>
 

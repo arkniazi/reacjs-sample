@@ -6,6 +6,7 @@ import { Error } from "../Error"
 const InputWrapper = styled.div`
     position: relative;
     width: ${(props) => (props.fullWidth ? "100%" : "initial")};
+
 `
 const LabelStyled = styled.label`
     border-bottom: ${(props) => props.active && "1px solid"};
@@ -34,14 +35,16 @@ const LabelStyled = styled.label`
 const RadioStyled = styled.input`
     display: none;
 
-    &:checked + p:after {
-        transform: translateY(4px);
-        opacity: 1;
-    }
+ 
 
     &:hover + p:after{
         transform: translateY(4px);
         opacity: 0.4;
+    }
+
+    &:checked + p:after {
+        transform: translateY(4px);
+        opacity: 1;
     }
 `
 

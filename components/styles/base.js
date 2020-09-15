@@ -44,23 +44,39 @@ export const GlobalStyle = createGlobalStyle`
 
     }
     p{
-        font-size:${theme.fontSizes.desktop.body.size};
-        line-height: ${theme.fontSizes.desktop.body.lineHeight};
+        font-size:${theme.fontSizes.mobile.body.size};
+        line-height: ${theme.fontSizes.mobile.body.lineHeight};
         margin: 0;
+
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.body.size};
+            line-height: ${theme.fontSizes.desktop.body.lineHeight}; 
+        }
+
         &.lead{
-            font-size:${theme.fontSizes.desktop.lead.size};
-            line-height: ${theme.fontSizes.desktop.lead.lineHeight};
+            font-size:${theme.fontSizes.mobile.lead.size};
+            line-height: ${theme.fontSizes.mobile.lead.lineHeight};
             font-family: ${theme.font.heading};
+
+            ${(props) => props.theme.mediaQueries.lg} {
+                font-size:${theme.fontSizes.desktop.lead.size};
+                line-height: ${theme.fontSizes.desktop.lead.lineHeight};
+            }
         }
         &.label{
-            font-size:${theme.fontSizes.desktop.label.size};
-            line-height: ${theme.fontSizes.desktop.label.lineHeight};
+            font-size:${theme.fontSizes.mobile.label.size};
+            line-height: ${theme.fontSizes.mobile.label.lineHeight};
             font-family: ${theme.font.heading};
             font-weight: bold;
             text-transform: uppercase;
+
+            ${(props) => props.theme.mediaQueries.lg} {
+                font-size:${theme.fontSizes.desktop.label.size};
+                line-height: ${theme.fontSizes.desktop.label.lineHeight};
+            }
         }
         &.small{
-            font-size: ${theme.fontSizes.desktop.small.size};
+            font-size: ${theme.fontSizes.desktop.size};
         }
     }
 
@@ -85,30 +101,55 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
     h1, .h1{
-        font-size:${theme.fontSizes.desktop.h1.size};
-        line-height: ${theme.fontSizes.desktop.h1.size};
+        font-size:${theme.fontSizes.mobile.h1.size};
+        line-height: ${theme.fontSizes.mobile.h1.size};
         color: ${theme.colors.white};
 
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.h1.size};
+            line-height: ${theme.fontSizes.desktop.h1.size};
+        }
+
         &.banner{
-            font-size:${theme.fontSizes.desktop.banner.size};
-            line-height: ${theme.fontSizes.desktop.banner.lineHeight};
+            font-size:${theme.fontSizes.mobile.banner.size};
+            line-height: ${theme.fontSizes.mobile.banner.lineHeight};
+
+            ${(props) => props.theme.mediaQueries.lg} {
+                font-size:${theme.fontSizes.desktop.banner.size};
+                line-height: ${theme.fontSizes.desktop.banner.lineHeight}; 
+            }
         }
     }
 
     h2, .h2{
-        font-size:${theme.fontSizes.desktop.h2.size};
-        line-height: ${theme.fontSizes.desktop.h2.size};
+        font-size:${theme.fontSizes.mobile.h2.size};
+        line-height: ${theme.fontSizes.mobile.h2.size};
+
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.h2.size};
+            line-height: ${theme.fontSizes.desktop.h2.size};
+        }
     }
 
     h3, .h3{
-        font-size:${theme.fontSizes.desktop.h3.size};
-        line-height: ${theme.fontSizes.desktop.h3.size};
+        font-size:${theme.fontSizes.mobile.h3.size};
+        line-height: ${theme.fontSizes.mobile.h3.size};
+
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.h3.size};
+            line-height: ${theme.fontSizes.desktop.h3.size};
+        }
     }
 
     h5, .h5{
-        font-size:${theme.fontSizes.desktop.h5.size};
-        line-height: ${theme.fontSizes.desktop.h5.size};
+        font-size:${theme.fontSizes.mobile.h5.size};
+        line-height: ${theme.fontSizes.mobile.h5.size};
         letter-spacing: 0;
+
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.h5.size};
+            line-height: ${theme.fontSizes.desktop.h5.size};
+        }
     }
 
     label.label, .label{

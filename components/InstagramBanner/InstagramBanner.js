@@ -24,14 +24,8 @@ export const InstagramBanner = () => {
                 <FlexContainer dir="row">
                     <ImageGrid>
                         {placeholderLinks.map((single, index) => (
-                            <Image
-                                path={single}
-                                alt="instagram placeholder"
-                                className="instagramBanner__image"
-                                height="175px"
-                                width="175px"
-                                key={index}
-                            />
+
+                            <img src={single} className="instagramBanner__image" alt="instagram placeholder" key={index} />
                         ))}
                     </ImageGrid>
                     <div className="instagramBanner__content">

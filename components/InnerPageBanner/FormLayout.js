@@ -10,9 +10,9 @@ export const FormLayout = () => {
             imgURL="/images/banner/banner-background.png"
         >
             <ComponentContainer>
-                <FlexContainer>
+                <div className="flex-container">
                     <div className="formLayout__column content-column">
-                        <div>
+                        <div className="formLayout__content">
                             <h1>
                                 Have a question?
                                 <br /> We would love to hear from you.
@@ -31,8 +31,10 @@ export const FormLayout = () => {
                     <div className="formLayout__column">
                         <ContactForm />
                     </div>
-                </FlexContainer>
+                </div>
             </ComponentContainer>
         </FormLayoutStyled>
     )
 }
+
+

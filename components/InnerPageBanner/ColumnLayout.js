@@ -14,7 +14,7 @@ export const ColumnLayout = () => {
                     About Lorem ipsum dolor sit adipiscing our story
                 </h2>
 
-                <FlexContainer>
+                <div className="flex-container">
                     <div className="innerPageBanner__column content-column">
                         <div>
                             <BannerDecoration
@@ -38,7 +38,7 @@ export const ColumnLayout = () => {
                             alt="surfing the barrel"
                         />
                     </div>
-                </FlexContainer>
+                </div>
             </ComponentContainer>
         </ColumnLayoutStyled>
     )

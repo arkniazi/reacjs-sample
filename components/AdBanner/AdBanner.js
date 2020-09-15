@@ -28,7 +28,7 @@ export const AdBanner = ({ margin }) => {
         <ComponentContainer >
             <AdBannerStyled margin={margin}>
                 <div className="adBannerStyled__flex-container">
-                    <div className="adBannerStyled__column">
+                    <div className="adBannerStyled__column img-column">
                         {
 
                             <motion.img

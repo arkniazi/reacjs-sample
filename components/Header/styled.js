@@ -10,9 +10,16 @@ export const StyledHeader = styled.div`
     .container {
         display: flex;
         align-items: center;
+        
         /* @media ${device.desktopL} {
             padding: 0;
         } */
+    }
+
+    .flex-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 `
 

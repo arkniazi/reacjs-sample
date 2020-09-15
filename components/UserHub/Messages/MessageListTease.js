@@ -1,6 +1,6 @@
-import { TeaseStyled } from './styled'
-import { Image } from '../Image';
-import { Star, Archive } from '../Icons'
+import { TeaseStyled } from '../styled'
+import { Image } from '../../Image';
+import { Star, Archive } from '../../Icons'
 
 export const MessageListTease = ({ item, setConversationID, setView, variants }) => {
     return (

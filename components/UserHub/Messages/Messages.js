@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MessageList } from './MessageList'
-import { Conversation } from './Conversation'
+import { Conversation } from '../Conversation/Conversation'
 import { AnimatePresence } from 'framer-motion'
 
 
@@ -39,7 +39,7 @@ const MessageListTeaseVariants = {
 
 
 
-export const Messages = () => {
+export const Messages = ({ demoMessageList }) => {
     const [view, setView] = useState('list');
     const [currentConversationID, setConversationID] = useState(0)
 
@@ -54,6 +54,7 @@ export const Messages = () => {
                         variants={MessageListVariants}
                         MessageListTeaseVariants={MessageListTeaseVariants}
                         ContainerVariants={ContainerVariants}
+                        demoMessageList={demoMessageList}
                         initial="hide"
                         animate="show"
                         exit="hide"
@@ -65,6 +66,7 @@ export const Messages = () => {
                     <Conversation
                         conversationID={currentConversationID}
                         setView={setView}
+                        demoMessageList={demoMessageList}
                         ContainerVariants={ContainerVariants}
                         initial="hide"
                         animate="show"

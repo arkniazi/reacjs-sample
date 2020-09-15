@@ -8,12 +8,12 @@ export const CardRow = () => {
             <StyledCardRow>
                 <div className="CardRow">
                     <h2 className="CardRow__title">Meet The Locals</h2>
-                    <FlexContainer dir="row" wrap="true">
+                    <div className="flex-container">
                         <CardTease />
                         <CardTease />
                         <CardTease />
                         <CardTease />
-                    </FlexContainer>
+                    </div>
                 </div>
             </StyledCardRow>
         </ComponentContainer>

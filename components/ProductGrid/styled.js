@@ -6,5 +6,6 @@ export const ProductGridStyled = styled(motion.div)`
     flex-wrap: wrap;
     margin-left: -12.5px;
     margin-right: -12.5px;
+ 
 `
 

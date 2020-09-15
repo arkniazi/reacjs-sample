@@ -10,7 +10,7 @@ export const LinkList = () => {
             <Wrapper>
                 <div>
                     <h2>
-                        Popular <br />
+                        Popular
                         Searches
                     </h2>
                 </div>

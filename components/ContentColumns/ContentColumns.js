@@ -2,7 +2,7 @@ import { ContentColumnsStyled } from "./styled"
 import { ComponentContainer } from "../styles/Page"
 import { FlexContainer } from "../styles/Page"
 
-export const ContentColumns = ({}) => {
+export const ContentColumns = ({ }) => {
     return (
         <ContentColumnsStyled>
             <ComponentContainer>

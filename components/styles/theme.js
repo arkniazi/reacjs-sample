@@ -9,7 +9,8 @@ export const theme = {
         themeBlue: "#179AD3",
         darkBlue: "#005CB0",
         lightGrey: "rgba(255,255,255,0.4)",
-        borderGrey: "#ECEDEF"
+        borderGrey: "#ECEDEF",
+        dateGrey: "#CFD1D8"
     },
     font: {
         body: "'Montserrat', sans-serif",
@@ -80,7 +81,7 @@ export const theme = {
         },
         mobile: {
             banner: {
-                size: "7.2rem",
+                size: "5.2rem",
                 lineHeight: "110%",
             },
             h1: {

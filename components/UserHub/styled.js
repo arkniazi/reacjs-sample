@@ -72,3 +72,51 @@ export const ConversationTitleBarStyled = styled.div`
             }
         }
 `
+
+export const SingleConversationWrapper = styled.div`
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .most-recent-time{
+        position: relative;
+        top: -10px;
+        padding: 10px;
+        background: ${(props) => props.theme.colors.dateGrey};
+        border-radius: 15px;
+        font-size: 14px;
+    }
+`
+
+export const SingleConversationStyled = styled.div`
+    background-color: ${(props) => props.theme.colors.borderGrey};
+    padding: 30px 25px;
+    max-height: 350px;
+    overflow-y: scroll;
+    margin-top: -28px;
+`
+
+export const SingleMessageStyled = styled.div`
+    margin-bottom: 35px;
+
+    p{
+        margin: 0;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .singleMessage{
+        &__title-bar{
+            display: flex;
+            align-items: center;
+            margin-bottom: 11px;
+            .label{
+                margin-right: 15px;
+            }
+            .message{
+                font-size: ${(props) => props.theme.fontSizes.desktop.small.size}
+            }
+        }
+    }
+`

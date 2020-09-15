@@ -15,15 +15,19 @@ const variants = {
 
 const ArticleStyled = styled.article`
     padding: 20px 0;
+
+    &.accordion-border-bottom{
+         border-bottom: 3px solid black;
+    }
 `
 
 
-export const AccordionComponent = ({ label, name, heading, children }) => {
+export const AccordionComponent = ({ label, name, heading, children, className }) => {
     const [isToggled, setToggled] = useState(false)
     return (
-        <ArticleStyled>
+        <ArticleStyled className={className} onClick={() => setToggled(prevState => !prevState)}>
             {label ? (
-                <label className="label" htmlFor={name ? name : label} onClick={() => setToggled(prevState => !prevState)}>{label}</label>
+                <label className="label" htmlFor={name ? name : label}>{label}</label>
             ) : heading ? (
                 <h4 className="label" onClick={() => setToggled(prevState => !prevState)}>{heading}</h4>
             ) : ''}
