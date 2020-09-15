@@ -1,4 +1,4 @@
-import { useState, useEffect, useLayoutEffect } from "react"
+import { useState } from "react"
 import Router from "next/router"
 import Link from "next/link"
 import NProgress from "nprogress"
@@ -14,6 +14,7 @@ import { FlexContainer } from "../styles/Page"
 import { theme } from "../styles/theme"
 import { breakpoints } from "../styles/theme"
 
+import { useWindowSize } from "../../lib/useWindowSize"
 
 Router.onRouteChangeStart = () => {
     NProgress.start()
@@ -25,18 +26,6 @@ Router.onRouteChangeError = () => {
     NProgress.done()
 }
 
-const useWindowSize = () => {
-    const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
-        function updateSize() {
-            setSize([window.innerWidth, window.innerHeight]);
-        }
-        window.addEventListener('resize', updateSize);
-        updateSize();
-        return () => window.removeEventListener('resize', updateSize);
-    }, []);
-    return size;
-}
 
 
 export const Header = () => {

@@ -2,10 +2,16 @@ import styled from "styled-components"
 
 export const InnerPageBannerStyled = styled.div`
     margin-bottom: -1px;
-    border-top: ${(props) => props.theme.sizes.headerHeight} solid
+    border-top: 57px solid
         ${(props) => props.theme.colors.darkBlue};
     position: relative;
     z-index: 1;
+
+    ${(props) => props.theme.mediaQueries.lg} {
+        border-top: ${(props) => props.theme.sizes.headerHeight} solid
+        ${(props) => props.theme.colors.darkBlue};
+    }
+    
     p.lead {
         font-weight: normal;
         color: white;

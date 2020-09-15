@@ -1,8 +1,13 @@
-import { InstagramBannerStyled, ImageGrid } from "./styled"
-import { ComponentContainer } from "../styles/Page"
 import { Image } from "../Image"
-import { FlexContainer } from "../styles/Page"
 import { Instagram } from "../Icons"
+
+import { ComponentContainer } from "../styles/Page"
+import { FlexContainer } from "../styles/Page"
+import { InstagramBannerStyled, ImageGrid } from "./styled"
+
+import { useWindowSize } from "../../lib/useWindowSize"
+import { breakpoints } from "../styles/theme"
+
 
 const placeholderLinks = [
     "/images/InstagramBanner/placeholder.png",
@@ -16,6 +21,8 @@ const placeholderLinks = [
 ]
 
 export const InstagramBanner = () => {
+    const [width, height] = useWindowSize();
+
     return (
         <InstagramBannerStyled
             imgURL="/images/banner/banner-background.png"
@@ -32,8 +39,8 @@ export const InstagramBanner = () => {
                         <Instagram
                             fill="black"
                             className="instagramBanner__icon"
-                            height="153px"
-                            width="153px"
+                            height={width >= parseInt(breakpoints[2]) ? "153px" : '100px'}
+                            width={width >= parseInt(breakpoints[2]) ? "153px" : '100px'}
                         />
                         <h2>Follow us</h2>
                         <h2 className="darkGrey">On Instagram</h2>

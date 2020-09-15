@@ -1,8 +1,9 @@
 import React from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { MenuAccordion } from '../Accordion'
+import TextLink from "../TextLink"
+
 import { MobileMenuStyled, Background } from './styled'
-
-
 
 const variants = {
     open: {
@@ -72,7 +73,15 @@ export const MobileMenu = ({ isNavOpen, setNavState }) => {
 
                     {links.map(link => (
                         <motion.li variants={linksVariants} key={link}>
-                            <a href="#">{link}</a>
+                            <MenuAccordion>
+                                <TextLink
+                                    as="/search-products/surf"
+                                    url="/search-products/[...param]"
+                                    color="white"
+                                    text="Surf"
+                                />
+                                <p>heheheh</p>
+                            </MenuAccordion>
                         </motion.li>
                     ))}
                 </motion.ul>
