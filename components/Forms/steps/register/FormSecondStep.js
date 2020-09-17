@@ -18,10 +18,10 @@ export const FormSecondStep = () => {
 
             <FormInputWrapper margin="0 0 10px 0">
                 <TextInput
-                    label="school"
-                    name="school"
+                    label="phone"
+                    name="phone"
                     type="text"
-                    placeholder="school"
+                    placeholder="phone"
                     color="black"
                     altStyle
                     noLabel

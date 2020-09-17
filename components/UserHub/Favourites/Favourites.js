@@ -1,5 +1,5 @@
 import { ProductGrid } from '../../ProductGrid'
-import { searchResults } from '../../../pages/search-products/demodata'
+import { searchResults } from '../../DemoData'
 
 export const Favourites = () => {
     return (

@@ -1,0 +1,120 @@
+# PHP CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-php/ for more details
+#
+version: 2.1
+orbs:
+  slack: circleci/slack@3.4.2
+jobs:
+    build_frontend:
+        docker:
+            # Specify the version you desire here
+            - image: circleci/node:12
+
+        steps:
+            - add_ssh_keys
+            - restore_cache:
+                  keys:
+                      - source-v1-{{ .Branch }}-{{ .Revision }}
+                      - source-v1-{{ .Branch }}-
+                      - source-v1-
+
+            - checkout
+
+            - save_cache:
+                  key: source-v1-{{ .Branch }}-{{ .Revision }}
+                  paths:
+                      - '.git'
+
+            - restore_cache:
+                  keys:
+                      - node-v1-{{ checksum "package.json" }}
+
+            - run: npm install
+
+            - save_cache:
+                  key: node-v1-{{ checksum "package.json" }}
+                  paths:
+                      - node_modules
+
+            - run: npm run build
+
+            - persist_to_workspace:
+                  root: .
+                  paths:
+                      - .storybook
+                      - build
+                      - node_modules
+                      - public
+                      - src
+                      - .deployignore
+                      - www
+
+    deploy:
+        docker:
+            # Specify the version you desire here
+            - image: circleci/buildpack-deps:bionic
+
+        steps:
+            - add_ssh_keys
+            - run: sudo apt-get update && sudo apt-get install rsync && sudo apt-get install sshpass
+            - attach_workspace:
+                  # Must be absolute path or relative path from working_directory
+                  at: ./
+
+            - deploy:
+                  name: pre_deploy
+                  command: |
+                      if [ "${CIRCLE_BRANCH}" = "${GLOBAL_STAGING_BRANCH}" ]; then
+                        [ -f .env.dev ] && rm -f .env && ln -s .env.dev .env
+                        [ -f .env.staging ] && rm -f .env && ln -s .env.staging .env
+                        [ -f .env.$CIRCLE_BRANCH ] && rm -f .env && ln -s .env.$CIRCLE_BRANCH .env
+                        exit 0
+                      elif [ "${CIRCLE_BRANCH}" = "${GLOBAL_PRODUCTION_BRANCH}" ]; then
+                        [ -f .env.production ] && rm -f .env && ln -s .env.production .env
+                        [ -f .env.$CIRCLE_BRANCH ] && rm -f .env && ln -s .env.$CIRCLE_BRANCH .env
+                        exit 0
+                      else
+                        echo "Not deployable branch, dry run only"
+                      fi
+
+            - run: wget -O .deployignore.global $GLOBAL_DEPLOY_IGNORE_URL
+
+            - deploy:
+                  name: deploy
+                  command: |
+                      if [ "${CIRCLE_BRANCH}" = "${GLOBAL_STAGING_BRANCH}" ]; then
+                        rsync -azcq --rsync-path="sudo rsync" --chown=www-data:www-data -e "ssh -p60022 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --force --delete --exclude-from=.deployignore.global --exclude-from=.deployignore ./ $DEVBOX_USER@$DEVBOX_HOST:$DEVBOX_WEBROOT/$CIRCLE_PROJECT_REPONAME
+                      elif [ "${CIRCLE_BRANCH}" = "${GLOBAL_PRODUCTION_BRANCH}" ]; then
+                        if [ -z "${LIVE_PASSWORD}" ]; then
+                          rsync -azcq --chmod=D2775,F664 --force --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude-from=.deployignore.global --exclude-from=.deployignore ./ $LIVE_USER@$LIVE_HOST:$LIVE_WEBROOT/$CIRCLE_PROJECT_REPONAME
+                        else
+                          sshpass -p${LIVE_PASSWORD} rsync -azcq --chmod=D2775,F664 --force --delete -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --exclude-from=.deployignore.global --exclude-from=.deployignore ./ $LIVE_USER@$LIVE_HOST:$LIVE_WEBROOT/$CIRCLE_PROJECT_REPONAME
+                        fi
+                      else
+                        echo "Not deployable branch, dry run only"
+                      fi
+            - slack/status:
+                  only_for_branches: 'develop,master'
+                  webhook: '${SLACK_WEBHOOK}'
+
+workflows:
+    version: 2.1
+    build_and_deploy:
+        jobs:
+            - build_frontend:
+                  filters:
+                      branches:
+                          only:
+                              - master
+                              - develop
+                  context: org-juicebox
+            - deploy:
+                  filters:
+                      branches:
+                          only:
+                              - master
+                              - develop
+                  context: org-juicebox
+                  requires:
+                      - build_frontend

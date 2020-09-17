@@ -14,7 +14,7 @@ export const RegisterMultiStep = () => {
     const InitialValues = {
         accountType: "",
         address: "",
-        school: ""
+        phone: ""
     }
 
     // const validationSchema = Yup.object({

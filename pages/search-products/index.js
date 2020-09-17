@@ -10,7 +10,7 @@ import { KeywordSearchForm } from '../../components/Forms/KeywordSearchForm'
 import BorderTopTemplate from "../../templates/BorderTopTemplate"
 import styled from "styled-components"
 
-import { searchResults } from './demodata';
+import { searchResults } from '../../components/DemoData';
 
 const ProductGridContainer = styled.div`
     flex: 3 0 0;

@@ -1,6 +1,6 @@
 import { ComponentContainer } from "../styles/Page"
 import { ProductGrid } from '../ProductGrid'
-import { searchResults } from '../../pages/search-products/demodata';
+import { searchResults } from '../DemoData';
 import { SearchByCategoryForm } from '../Forms/SearchByCategoryForm';
 import { FlexContainer } from "../styles/Page"
 import { Button } from "../Button"

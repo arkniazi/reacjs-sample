@@ -30,6 +30,7 @@ export const StyledBanner = styled.section`
             box-shadow: ${(props) => props.theme.bs.blue};
 
             ${(props) => props.theme.mediaQueries.lg} {
+                top: 200px;
                 margin-left: 103px;
                 max-width: unset;
             }

@@ -11,7 +11,7 @@ import { ComponentContainer, FlexContainer } from "../styles/Page"
 import { SingleItemStyled } from "./styled"
 
 //TEMP DUMMY DATA
-import { searchResults } from '../../pages/search-products/demodata'
+import { searchResults } from '../DemoData'
 
 
 const SingleItemComponent = ({ id }) => {
