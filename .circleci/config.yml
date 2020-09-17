@@ -37,8 +37,6 @@ jobs:
                   paths:
                       - node_modules
 
-            - run: npm run build-static
-
             - persist_to_workspace:
                   root: .
                   paths:
