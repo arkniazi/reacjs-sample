@@ -37,13 +37,15 @@ jobs:
                   paths:
                       - node_modules
 
-            - run: npm run build
+            - run: npm run build-static
 
             - persist_to_workspace:
                   root: .
                   paths:
+                      - .next
                       - .storybook
                       - build
+                      - out
                       - node_modules
                       - public
                       - src
