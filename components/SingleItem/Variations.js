@@ -1,4 +1,4 @@
-import { SingleItemVariationForm } from '../forms/SingleItemVariationForm'
+import { SingleItemVariationForm } from '../Forms/SingleItemVariationForm'
 import { PriceStyled } from './styled'
 
 export const Variations = ({ handleSetItemSize, variationOptions }) => {
