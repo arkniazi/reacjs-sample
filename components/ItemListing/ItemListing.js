@@ -26,7 +26,7 @@ class ItemListing extends Component {
                     {({ data, error, loading }) => {
                         if (loading) return <p>Loading...</p>
                         if (error) return <p>Error! ${error}</p>
-                        console.log(data)
+                  
                         if (!data.items.length) return <p>No Items</p>
 
                         return (

@@ -1,7 +1,6 @@
 import gql from "graphql-tag"
 import { useState, useEffect } from 'react'
 
-
 import { ImageGalleryComponent } from '../ImageGalleryComponent'
 import { Variations } from "./Variations"
 import { Intro } from "./Intro"
@@ -11,7 +10,7 @@ import { ComponentContainer, FlexContainer } from "../styles/Page"
 import { SingleItemStyled } from "./styled"
 
 //TEMP DUMMY DATA
-import { searchResults } from '../DemoData'
+import {searchResults} from '../DemoData'
 
 
 const SingleItemComponent = ({ id }) => {
@@ -62,6 +61,10 @@ const SingleItemComponent = ({ id }) => {
             </ComponentContainer>
         </SingleItemStyled>
     )
+}
+
+SingleItemComponent.defaultProps = {
+    id: 1
 }
 
 export { SingleItemComponent }

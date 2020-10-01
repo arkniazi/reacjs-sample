@@ -12,7 +12,7 @@ export default class Item extends Component {
 
     render() {
         const { item } = this.props
-        console.log(typeof item.image)
+
         return (
             <ItemStyled>
                 {item.image && <img src={item.image} alt={item.image.title} />}

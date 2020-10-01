@@ -1,9 +1,9 @@
 // TEMPORARY DEMO DATA 
 
-export const sellerTypeOptions = [
-    { value: "business", label: "Business" },
-    { value: "private", label: "Private" },
-]
+// export const sellerTypeOptions = [
+//     { value: "business", label: "Business" },
+//     { value: "private", label: "Private" },
+// ]
 
 
 export const searchResults = [
@@ -251,4 +251,4 @@ export const searchResults = [
         category: 'surf',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...'
     },
-]
+];

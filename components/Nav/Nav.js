@@ -18,7 +18,7 @@ export const Nav = ({ color }) => {
     const [wetsuitDropDown, setWetsuitDropDown] = useState(false)
 
     const handleMouseOverNav = (type) => {
-        console.log(type)
+   
         switch (type) {
             case "surf":
                 handleDropDownChange(true, false, false)
