@@ -24,7 +24,7 @@ const HorizontalTeaseVariants = {
 
 
 
-export const ProductGrid = ({ view, searchResults }) => {
+export const ProductGrid = ({ view, searchResults, sellingItems, setItemID, setView }) => {
     let gridView = view === 'grid' ? true : false;
     let horizontalView = view === 'horizontal' ? true : false;
 
@@ -55,6 +55,9 @@ export const ProductGrid = ({ view, searchResults }) => {
                                 key={index}
                                 result={result}
                                 variants={HorizontalTeaseVariants}
+                                sellingItems={sellingItems}
+                                setItemID={setItemID}
+                                setView={setView}
                                 initial="hide"
                                 animate="show"
                                 exit="hide"

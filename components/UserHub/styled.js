@@ -82,14 +82,14 @@ export const SingleConversationWrapper = styled.div`
         position: relative;
         top: -10px;
         padding: 10px;
-        background: ${(props) => props.theme.colors.dateGrey};
+        background: ${(props) => props.theme.colors.dateGray};
         border-radius: 15px;
         font-size: 14px;
     }
 `
 
 export const SingleConversationStyled = styled.div`
-    background-color: ${(props) => props.theme.colors.borderGrey};
+    background-color: ${(props) => props.theme.colors.borderGray};
     padding: 30px 25px;
     max-height: 350px;
     overflow-y: scroll;

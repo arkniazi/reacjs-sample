@@ -5,7 +5,7 @@ export const StyledHeader = styled.div`
     z-index: 2;
     position: absolute;
     width: 100%;
-    border-bottom: 1px solid ${(props) => props.theme.colors.lightGrey};
+    border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
 
     .container {
         display: flex;

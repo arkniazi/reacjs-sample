@@ -36,7 +36,7 @@ export const TextAreaStyled = styled.textarea`
     &:focus,
     &:hover {
         outline: none;
-        border-color: ${(props) => props.theme.colors.borderGrey};
+        border-color: ${(props) => props.theme.colors.borderGray};
     }
 `
 

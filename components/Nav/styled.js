@@ -24,9 +24,9 @@ export const StyledNavItem = styled(motion.div)`
     align-items: center;
     justify-content: center;
     border-left: ${(props) =>
-        props.border ? "1px solid " + props.theme.colors.lightGrey : ""};
+        props.border ? "1px solid " + props.theme.colors.lightGray : ""};
     border-right: ${(props) =>
-        props.border ? "1px solid " + props.theme.colors.lightGrey : ""};
+        props.border ? "1px solid " + props.theme.colors.lightGray : ""};
     width: ${(props) => (props.setWidth ? "140px" : "")};
 
 

@@ -1,3 +1,82 @@
+export const demoSellingItemsList = [
+    {
+        id: 1,
+        title: 'Chilli A2 Surfboard',
+        metricLength: '10',
+        volume: '30L',
+        price: '320.00',
+        imagePath: '/images/products/demo_product.png',
+        galleryImages: [
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
+        ],
+        variations: [
+            { value: '1', label: '1m' },
+            { value: '2', label: '2m' },
+            { value: '3', label: '3m' },
+            { value: '4', label: '4m' },
+            { value: '5', label: '5m' },
+        ],
+        category: 'surf',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...',
+        status: true,
+        postDate: '1601453136',
+        expires: '1604045136'
+    },
+    {
+        id: 2,
+        title: 'Chilli Surfboard',
+        metricLength: '6',
+        volume: '25L',
+        price: '370.00',
+        imagePath: '/images/products/demo_product.png',
+        galleryImages: [
+            {
+                original: '/images/products/demo_product_gallery_01.jpg',
+                thumbnail: '/images/products/demo_product_gallery_01.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_02.jpg',
+                thumbnail: '/images/products/demo_product_gallery_02.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_03.jpg',
+                thumbnail: '/images/products/demo_product_gallery_03.jpg',
+            },
+            {
+                original: '/images/products/demo_product_gallery_04.jpg',
+                thumbnail: '/images/products/demo_product_gallery_04.jpg',
+            }
+        ],
+        variations: [
+            { value: '1', label: '1m' },
+            { value: '2', label: '2m' },
+            { value: '3', label: '3m' },
+            { value: '4', label: '4m' },
+            { value: '5', label: '5m' },
+        ],
+        category: 'surf',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget et, viverra convallis diam non metus viverra nunc scelerisque...',
+        status: false,
+        postDate: '1601453136',
+        expires: '1604045136'
+    },
+]
+
 export const demoMessageList = [
     {
         id: 1,

@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import Moment from 'react-moment';
 import { Image } from "../Image"
-import { HorizontalTeaseStyled } from './styled'
+import { HorizontalTeaseStyled, StatusStyled, ItemTimeStyled, SellingItemVariant } from './styled'
 import { FavouriteProductIcon } from '../Icons'
 
 
@@ -9,19 +10,29 @@ export const HorizontalTease = ({
     initial,
     animate,
     exit,
+    sellingItems,
+    setItemID,
+    setView,
     result: {
         imagePath,
+        status,
+        postDate,
+        expires,
+        id,
         price,
         title,
         description,
         volume,
         metricLength } }) => {
 
-
     const [favourite, setFavourite] = useState(false) //default set by data, hardcoded for now
 
     const handleSetFavourite = () => {
         setFavourite(!favourite)
+    }
+    const handleViewChange = () => {
+        setView('edit')
+        setItemID(id)
     }
 
     return (
@@ -48,7 +59,34 @@ export const HorizontalTease = ({
                     <p className="gridViewStyled__description">{description}</p>
                     <p className="gridViewStyled__meta">{metricLength} + {volume}</p>
                 </div>
+                {sellingItems && (
+                    <SellingItemVariant>
+                        <StatusStyled active={status}>
+                            <div className="icon"></div>
+                            <p>{status ? 'Active' : 'Expired'}</p>
+                        </StatusStyled>
+
+                        <ItemTimeStyled>
+                            <p>
+                                <span>Posted: </span>
+                                <Moment format="DD/MM/YYYY" unix>{postDate}</Moment>
+                            </p>
+
+                            <p>
+                                <span>Expires In: </span>
+                                <Moment format="DD/MM/YYYY" unix>{expires}</Moment>
+                            </p>
+                        </ItemTimeStyled>
+
+                        <div>
+                            <button onClick={handleViewChange}>Edit Post</button>
+                            <button onClick={handleViewChange}>Remove Item</button>
+                        </div>
+
+                    </SellingItemVariant>
+                )}
+
             </div>
-        </HorizontalTeaseStyled>
+        </HorizontalTeaseStyled >
     )
 }

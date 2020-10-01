@@ -18,17 +18,13 @@ export const UserHub = () => {
     const [view, setView] = useState('messages')
 
     const renderView = () => {
-
         switch (view) {
             case 'messages':
                 return <Messages demoMessageList={demoMessageList} />
-                break;
             case 'favourites':
                 return <Favourites />
-                break;
             case 'selling':
                 return <Selling />
-                break;
             default:
                 return <Messages />
         }
@@ -36,7 +32,6 @@ export const UserHub = () => {
     return (
         <UserHubStyled>
             <FlexContainer dir="row" style={{ padding: '0 0 60px 0' }}>
-
                 <UnderlineButton
                     className={view == 'messages' && 'active'}
                     onClick={() => setView('messages')}

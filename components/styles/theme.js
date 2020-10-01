@@ -5,12 +5,13 @@ export const theme = {
         white: "#FFF",
         black: "#000",
         darkGray: "#272932",
+        slateGray: "#373A47",
         orange: "#F37126",
         themeBlue: "#179AD3",
         darkBlue: "#005CB0",
-        lightGrey: "rgba(255,255,255,0.4)",
-        borderGrey: "#ECEDEF",
-        dateGrey: "#CFD1D8"
+        lightGray: "rgba(255,255,255,0.4)",
+        borderGray: "#ECEDEF",
+        dateGray: "#CFD1D8"
     },
     font: {
         body: "'Montserrat', sans-serif",

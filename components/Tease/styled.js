@@ -85,7 +85,7 @@ export const HorizontalTeaseStyled = styled(tease)`
         display: flex;
         
         &__imageWrap{
-            border: 1px solid ${(props) => props.theme.colors.borderGrey};
+            border: 1px solid ${(props) => props.theme.colors.borderGray};
             margin-right: 20px;
             margin-bottom: 0;
             border-bottom: 0;
@@ -102,4 +102,42 @@ export const HorizontalTeaseStyled = styled(tease)`
             padding: 16px 0 5px 0;
         }
     }
+`
+
+export const SellingItemVariant = styled.div`
+    min-width: 135px;
+    margin-left: 100px;
+`
+export const StatusStyled = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    .icon{
+        border: 2px solid ${(props) => props.active ? props.theme.colors.orange : props.theme.colors.black};
+        height: 15px;
+        width: 15px;
+        margin-right: 5px;
+        border-radius: 50%;
+        background-color: ${(props) => props.active && props.theme.colors.orange}
+    }
+    p{
+      font-size: ${props => props.theme.fontSizes.desktop.label.size};  
+      font-family: ${props => props.theme.font.heading};
+      text-transform: uppercase;
+    }
+`
+
+export const ItemTimeStyled = styled.div`
+    margin-bottom: 25px;
+    p{
+        font-size: ${props => props.theme.fontSizes.desktop.label.size};
+        display: flex;
+        font-weight: lighter;
+        margin-bottom: 5px;
+        color: ${props => props.theme.colors.slateGray};
+        span{
+            font-weight: bold;
+        }
+    }
+
 `
