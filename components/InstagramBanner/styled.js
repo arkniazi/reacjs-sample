@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { theme } from "../styles/theme"
 
 export const InstagramBannerStyled = styled.div`
     margin-top: ${(props) => props.theme.sizes.md};
@@ -58,7 +59,6 @@ export const InstagramBannerStyled = styled.div`
         }
     }
 `
-
 export const ImageGrid = styled.div`
     display: flex;
     flex-wrap: wrap;

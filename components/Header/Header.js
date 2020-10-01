@@ -15,6 +15,7 @@ import { theme } from "../styles/theme"
 import { breakpoints } from "../styles/theme"
 
 import { useWindowSize } from "../../lib/useWindowSize"
+import { ResponsiveSwitch } from "../Util/ResponsiveSwitch"
 
 Router.onRouteChangeStart = () => {
     NProgress.start()
@@ -48,8 +49,11 @@ export const Header = () => {
                             width="36px"
                         />
                     </StyledLogo>
-                    {width >= parseInt(breakpoints[2]) ? <Nav color="white" /> : <MobileMenuButton isNavOpen={isNavOpen} setNavState={setNavState} />}
-
+                    <ResponsiveSwitch
+                        desktopComponent={<Nav color="white" />}
+                        mobileComponent={<MobileMenuButton isNavOpen={isNavOpen} setNavState={setNavState} />}
+                        breakpointIndex={2}
+                    />
                 </div>
 
 

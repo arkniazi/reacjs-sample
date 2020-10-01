@@ -1,12 +1,53 @@
 
 import { Formik, Form } from "formik"
-import { FlexContainer } from "../styles/Page"
 
-import { Submit } from "../FormFields/Submit"
 import { Radio } from "../FormFields/Radio"
 import { InputFlexSection } from "./sections/InputFlexSection"
 import { FormInputWrapper } from '../FormFields/FormInputWrapper'
+import { SelectFilter } from "../FormFields/SelectFilter"
 
+import { ResponsiveSwitch } from "../Util/ResponsiveSwitch"
+
+
+const categoryOptions = [
+    { value: "surf", label: "Surf" },
+    { value: "sup", label: "Sup" },
+    { value: "kitesurf", label: "Kitesurf" },
+    { value: "foil", label: "Foil" },
+    { value: "wetsuit", label: "Wetsuit" },
+]
+
+export const DesktopCategorySelect = () => {
+    return (
+        <InputFlexSection justify="space-between">
+            <Radio
+                label="Surf"
+                name="category"
+                type="radio"
+                value="surf"
+                color="black"
+                submitOnChange
+            />
+            <Radio label="Sup" name="category" type="radio" value="sup" color="black" submitOnChange />
+            <Radio label="Kitesurf" name="category" type="radio" value="kitesurf" color="black" submitOnChange />
+            <Radio label="Foil" name="category" type="radio" value="foil" color="black" submitOnChange />
+            <Radio label="Wetsuit" name="category" type="radio" value="wetsuit" color="black" submitOnChange />
+        </InputFlexSection>
+    )
+}
+
+export const MobileCategorySelect = () => {
+    return (
+        <SelectFilter
+            options={categoryOptions}
+            name="category"
+            label="category"
+            placeholder="Category"
+            color="black"
+            noLabel
+        />
+    )
+}
 
 export const SearchByCategoryForm = () => {
     const InitialValues = {
@@ -28,30 +69,12 @@ export const SearchByCategoryForm = () => {
                 {({ isSubmitting }) => (
                     <Form>
                         <FormInputWrapper margin="0 0 30px 0">
-                            <InputFlexSection justify="space-between">
-                                <Radio
-                                    label="Surf"
-                                    name="category"
-                                    type="radio"
-                                    value="surf"
-                                    color="black"
-                                    submitOnChange
-                                />
-                                <Radio label="Sup" name="category" type="radio" value="sup" color="black" submitOnChange />
-                                <Radio label="Kitesurf" name="category" type="radio" value="kitesurf" color="black" submitOnChange />
-                                <Radio label="Foil" name="category" type="radio" value="foil" color="black" submitOnChange />
-                                <Radio label="Wetsuit" name="category" type="radio" value="wetsuit" color="black" submitOnChange />
-                            </InputFlexSection>
-                        </FormInputWrapper>
-
-                        {/* <FlexContainer dir="column">
-                            <Submit
-                                type="submit"
-                                isSubmitting={isSubmitting}
-                                text="Search"
-                                searchStyle
+                            <ResponsiveSwitch
+                                desktopComponent={<DesktopCategorySelect />}
+                                mobileComponent={<MobileCategorySelect />}
+                                breakpointIndex={2}
                             />
-                        </FlexContainer> */}
+                        </FormInputWrapper>
                     </Form>
                 )}
             </Formik>
