@@ -120,3 +120,19 @@ export const SingleMessageStyled = styled.div`
         }
     }
 `
+
+export const EditItemStyled = styled(motion.div)`
+    
+
+    ${(props) => props.theme.mediaQueries.lg} {
+        max-width: 75%;
+    }
+
+    h4{
+        letter-spacing: unset;
+        font-weight: 500;
+        margin-top: 45px;
+        margin-bottom: 15px;
+    }
+     
+`

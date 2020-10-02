@@ -141,6 +141,16 @@ export const GlobalStyle = createGlobalStyle`
         }
     }
 
+    h4, .h4{
+        font-size:${theme.fontSizes.mobile.h4.size};
+        line-height: ${theme.fontSizes.mobile.h4.size};
+
+        ${(props) => props.theme.mediaQueries.lg} {
+            font-size:${theme.fontSizes.desktop.h4.size};
+            line-height: ${theme.fontSizes.desktop.h4.size};
+        }
+    }
+
     h5, .h5{
         font-size:${theme.fontSizes.mobile.h5.size};
         line-height: ${theme.fontSizes.mobile.h5.size};

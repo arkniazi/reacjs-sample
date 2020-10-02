@@ -30,7 +30,7 @@ export const TextInputStyles = css`
     &:focus,
     &:hover {
         outline: none;
-        border-color: ${(props) => props.theme.colors.borderGray};
+        border-color: ${(props) => props.theme.colors.themeBlue};
     }
 `
 
@@ -43,6 +43,9 @@ export const InputWrapper = styled.div`
 
     &:nth-child(2) {
         margin-left: ${(props) => (props.fullWidth ? "5px" : "initial")};
+    }
+    &:nth-child(3) {
+        margin-left: ${(props) => (props.fullWidth ? "10px" : "initial")};
     }
 `
 

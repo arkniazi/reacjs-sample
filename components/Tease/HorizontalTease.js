@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import Moment from 'react-moment';
 import { Image } from "../Image"
-import { HorizontalTeaseStyled, StatusStyled, ItemTimeStyled, SellingItemVariant } from './styled'
-import { FavouriteProductIcon } from '../Icons'
-
+import { HorizontalTeaseStyled, StatusStyled, ItemTimeStyled, SellingItemVariant, ItemCTAStyled } from './styled'
+import { FavouriteProductIcon, Edit, ExitSquare } from '../Icons'
+import { theme } from '../styles/theme'
 
 export const HorizontalTease = ({
     variants,
@@ -12,6 +12,7 @@ export const HorizontalTease = ({
     exit,
     sellingItems,
     setItemID,
+    disableHover,
     setView,
     result: {
         imagePath,
@@ -41,7 +42,7 @@ export const HorizontalTease = ({
             initial={initial}
             animate={animate}
             exit={exit}
-            whileHover={{ scale: 1.05 }}
+            whileHover={!disableHover && { scale: 1.05 }}
         >
             <div className="gridViewStyled">
                 <div className="gridViewStyled__imageWrap">
@@ -78,10 +79,26 @@ export const HorizontalTease = ({
                             </p>
                         </ItemTimeStyled>
 
-                        <div>
-                            <button onClick={handleViewChange}>Edit Post</button>
-                            <button onClick={handleViewChange}>Remove Item</button>
-                        </div>
+                        <ItemCTAStyled>
+                            <button onClick={handleViewChange}>
+                                <Edit
+                                    className="icon"
+                                    height={24}
+                                    width={24}
+                                    fill={theme.colors.darkGrey}
+                                />
+                                <span>Edit Post</span>
+                            </button>
+                            <button onClick={() => alert('are you sure?')}>
+                                <ExitSquare
+                                    className="icon"
+                                    height={24}
+                                    width={24}
+                                    fill={theme.colors.darkGrey}
+                                />
+                                <span>Remove Item</span>
+                            </button>
+                        </ItemCTAStyled>
 
                     </SellingItemVariant>
                 )}

@@ -11,6 +11,12 @@ export const customStyles = {
         color: "black",
         fontFamily: theme.font.heading,
         textTransform: "uppercase",
+        height: "100%",
+        minHeight: "45px",
+        '&:hover': {
+            borderColor: theme.colors.themeBlue,
+        }
+
     }),
     placeholder: (base) => ({
         ...base,

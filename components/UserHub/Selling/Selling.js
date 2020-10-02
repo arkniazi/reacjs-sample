@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ProductGrid } from '../../ProductGrid'
 import { demoSellingItemsList } from '../DemoData';
 import { Edit } from './Edit'
+import { AnimatePresence } from 'framer-motion'
 
 export const Selling = () => {
     const [view, setView] = useState('list');
@@ -17,6 +18,7 @@ export const Selling = () => {
                         view="horizontal"
                         searchResults={demoSellingItemsList}
                         sellingItems
+                        disableHover
                     />
                 )
 
@@ -28,9 +30,9 @@ export const Selling = () => {
     }
 
     return (
-        <div>
+        <AnimatePresence>
             { renderView()}
-        </div>
+        </AnimatePresence>
 
     )
 }

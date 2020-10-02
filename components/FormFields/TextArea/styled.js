@@ -7,8 +7,12 @@ const TextAreaStyles = css`
 
 export const TextAreaStyled = styled.textarea`
     background: transparent;
-    font-size: ${(props) => props.theme.fontSizes.desktop.link.size};
-    font-family: ${(props) => props.theme.font.body};
+    font-size: ${(props) =>
+        props.altStyle
+            ? props.theme.fontSizes.desktop.link.tiny
+            : props.theme.fontSizes.desktop.link.size};
+    font-family: ${(props) =>
+        props.altStyle ? props.theme.font.heading : props.theme.font.body};
     width: 100%;
     min-height: 140px;
     transition: ${(props) => props.theme.transitions.default};
@@ -26,6 +30,8 @@ export const TextAreaStyled = styled.textarea`
     ::-webkit-input-placeholder {
         color: ${(props) => props.color ? props.color : props.theme.colors.white};
         opacity: 1;
+        text-transform: ${(props) => (props.altStyle ? "uppercase" : "none")};
+        font-weight: ${(props) => (props.altStyle ? "bold" : "normal")};
     }
 
     :disabled {
@@ -36,7 +42,7 @@ export const TextAreaStyled = styled.textarea`
     &:focus,
     &:hover {
         outline: none;
-        border-color: ${(props) => props.theme.colors.borderGray};
+        border-color: ${(props) => props.theme.colors.themeBlue};
     }
 `
 

@@ -97,6 +97,7 @@ export const BackButtonStyled = styled.button`
     font-weight: bold;
     background: transparent;
     border: none;
+    padding-left: 0;
     cursor: pointer;
     &:focus{
             outline: none;

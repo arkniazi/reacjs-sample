@@ -1,7 +1,6 @@
 import React from "react"
-React.useLayoutEffect = React.useEffect
 
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Formik, Form } from "formik"
 import * as Yup from "yup"
 import { TextInput } from "../FormFields/TextInput"
 import { TextArea } from "../FormFields/TextArea"

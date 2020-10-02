@@ -137,7 +137,35 @@ export const ItemTimeStyled = styled.div`
         color: ${props => props.theme.colors.slateGray};
         span{
             font-weight: bold;
+            margin-right:3px;
         }
     }
+`
 
+export const ItemCTAStyled = styled.div`
+
+    button{
+        font-size: ${props => props.theme.fontSizes.desktop.label.size};
+        color: ${props => props.theme.colors.darkGray};
+        border: none;
+        background-color: transparent;
+        display: flex;
+        align-items: center;    
+        margin-bottom: 15px;
+        cursor: pointer;
+        &:focus{
+            outline: none;
+        }
+
+        span{
+            transform: translateX(12px);
+            will-change:transform;
+            transition: transform .3s ease;
+        }
+
+        &:hover span{
+            transform: translateX(5px);
+        }
+    }
+   
 `
