@@ -149,6 +149,13 @@ export const GlobalStyle = createGlobalStyle`
             font-size:${theme.fontSizes.desktop.h4.size};
             line-height: ${theme.fontSizes.desktop.h4.size};
         }
+
+        &.form-heading{
+            letter-spacing: unset;
+            font-weight: 500;
+            margin-top: 45px;
+            margin-bottom: 15px;
+        }
     }
 
     h5, .h5{

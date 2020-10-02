@@ -29,6 +29,23 @@ export const Exit = ({ className, height, width, fill, onClick }) => {
     )
 }
 
+export const ExitCircle = ({ className, height, width }) => {
+    return (
+        <svg width={width || "24"} height={height || "24"} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0)">
+                <path d="M6.10744 17.8925C9.36181 21.1469 14.6382 21.1469 17.8926 17.8925C21.1469 14.6381 21.1469 9.36177 17.8926 6.1074C14.6382 2.85303 9.36181 2.85303 6.10744 6.1074C2.85307 9.36177 2.85307 14.6381 6.10744 17.8925Z" fill="white" />
+                <path d="M14.3569 9.64307L9.64289 14.3571" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M9.64307 9.64307L14.3571 14.3571" stroke="black" stroke-linecap="round" stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="clip0">
+                    <rect width="20" height="20" fill="white" transform="translate(12 -2.14209) rotate(45)" />
+                </clipPath>
+            </defs>
+        </svg>
+    )
+}
+
 export const Minus = ({ className, height, width, fill }) => {
     return (
         <svg className={className} width={width || "14"} height={height || "3"} viewBox="0 0 16 3" fill="none" xmlns="http://www.w3.org/2000/svg">

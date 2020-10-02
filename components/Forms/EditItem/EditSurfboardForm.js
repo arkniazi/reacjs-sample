@@ -16,7 +16,7 @@ export const EditSurfboardForm = ({ itemToEdit }) => {
     const sizeOptions = itemToEdit.variations;
 
     const InitialValues = {
-        name: "",
+        name: itemToEdit.title,
         brand: "",
         model: "",
         location: "",

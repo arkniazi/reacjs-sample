@@ -4,7 +4,9 @@ import isUrl from 'is-url';
 import { useField } from 'formik';
 import { toast } from 'react-toastify';
 
-import { ImageUploadStyled, ImageContainer, LabelStyled } from './styled';
+import { ExitCircle } from '../../Icons'
+
+import { ImageUploadStyled, ImageContainer, LabelStyled, DeleteStyled } from './styled';
 import { FormLabel } from '../TextInput';
 import { Error } from '../Error';
 
@@ -48,23 +50,37 @@ export const Gallery = ({ setFieldValue, name, images, max, ...props }) => {
         }
     });
 
+    let imageUploadClassName = 'dropzone';
+    files.length && (imageUploadClassName = ' dropzone upload-attached');
+
     return (
         <div className={props.className}>
             <LabelStyled className="h4">{props.label}</LabelStyled>
-            <ImageUploadStyled gallery {...getRootProps({ className: 'dropzone' })}>
+            <ImageUploadStyled gallery {...getRootProps({ className: imageUploadClassName })} >
                 <input {...getInputProps()} />
-                {files && files.length
+                {files.length
                     ? files.map((file, i) => {
                         //use isUrl function to check if the value is just a plain image URL which has been previously uploaded
                         // in that case, it doesn't have a preview property
                         return (
                             <ImageContainer key={i} ref={imageEl} onClick={(e) => handleImgClick(e, i)}>
                                 <img src={isUrl(file) ? file : file.preview} alt={file.name} />
-                                {/* <DeleteStyled /> */}
+                                <DeleteStyled>
+                                    <ExitCircle />
+                                </DeleteStyled>
                             </ImageContainer>
                         );
                     })
                     : 'Drag and drop an image here, or click to select.'}
+
+
+
+                {/* IMPLEMENT PLACEHOLDER TILES  */}
+                {/* {files && files.length} */}
+
+
+
+
             </ImageUploadStyled>
 
             <Error meta={meta} />
